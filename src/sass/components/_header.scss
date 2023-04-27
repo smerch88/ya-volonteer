@@ -1,0 +1,28 @@
+.header__first-container {
+  padding: 10px;
+  background-color: var(--wp--preset--color--secondary);
+  color: var(--wp--preset--color--white);
+  font-family: var(--wp--preset--font-family--outfit);
+  font-size: var(--wp--preset--font-size--small);
+
+  & .container {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.header__contacts-list {
+  display: inherit;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.header__contacts-item,
+.header__time {
+  display: inherit;
+  align-items: center;
+  gap: 5px;
+}
+
+.header__contacts-item {
+}
