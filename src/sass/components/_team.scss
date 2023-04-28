@@ -1,0 +1,23 @@
+.team {
+  background-color: var(--wp--preset--color--background-secondary);
+}
+
+.team__subtitle {
+  padding: 0 var(--wp--preset--spacing--40);
+  margin: 0 auto;
+  width: fit-content;
+  font-family: var(--wp--preset--font-family--inter);
+  font-size: var(--wp--preset--font-size--small);
+  text-align: center;
+  background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--background);
+}
+
+.team__title {
+  margin-top: 10px;
+  text-align: center;
+  line-height: 1.3;
+  text-transform: capitalize;
+  font-size: var(--wp--preset--font-size--slider-title);
+  font-weight: 600;
+}
