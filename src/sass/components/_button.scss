@@ -1,0 +1,16 @@
+.button {
+  display: block;
+  padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--50);
+
+  color: var(--wp--preset--color--foreground);
+  background-color: var(--wp--preset--color--button-primary);
+
+  font-size: var(--wp--preset--font-size--small);
+  font-weight: 600;
+
+  transition: all 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+  &:hover {
+    background-color: var(--wp--preset--color--button-secondary);
+  }
+}
