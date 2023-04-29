@@ -1,0 +1,108 @@
+.team {
+  background-color: var(--wp--preset--color--background-secondary);
+}
+
+.team__subtitle {
+  padding: 0 var(--wp--preset--spacing--40);
+  margin: 0 auto;
+  width: fit-content;
+  font-family: var(--wp--preset--font-family--inter);
+  font-size: var(--wp--preset--font-size--small);
+  text-align: center;
+  background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--background);
+}
+
+.team__title {
+  margin-top: 10px;
+  text-align: center;
+  line-height: 1.3;
+  text-transform: capitalize;
+  font-size: var(--wp--preset--font-size--slider-title);
+  font-weight: 600;
+}
+
+.team__list {
+  display: flex;
+  column-gap: 32px;
+  margin-top: 62px;
+}
+
+.team__item {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc((100% - 32px * 3) / 4);
+  box-shadow: 0 6px 30px 7px #2125471a;
+}
+
+.team__img-wrapper {
+  width: 100%;
+  overflow: hidden;
+
+  & img {
+    transition: transform 1000ms ease;
+  }
+
+  &:hover img {
+    transform: scale(1.1);
+  }
+}
+
+.team__info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  padding: 30px 40px;
+  text-align: center;
+  background-color: var(--wp--preset--color--white);
+}
+
+.team__info-link {
+  padding-bottom: 5px;
+  color: var(--wp--preset--color--foreground);
+  font-family: var(--wp--preset--font-family--outfit);
+  font-size: var(--wp--custom--typography--font-size--heading-three);
+  font-weight: var(--wp--custom--typography--font-weight--semi-bold);
+  line-height: var(--wp--custom--typography--line-height--heading-three);
+
+  background: linear-gradient(to right, currentColor 0%, currentColor 100%);
+  background-size: 0 2px;
+  background-position: 0 95%;
+  transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+  background-repeat: no-repeat;
+
+  &:hover {
+    background-size: 100% 2px;
+  }
+}
+
+.team__info-specialty {
+  margin-top: 5px;
+  flex-grow: 1;
+
+  color: var(--wp--preset--color--body-text);
+  font-family: var(--wp--preset--font-family--inter);
+  font-size: var(--wp--preset--font-size--normal);
+  font-weight: var(--wp--custom--typography--font-weight--normal);
+  line-height: var(--wp--custom--typography--line-height--paragraph);
+}
+
+.team__social-list {
+  display: flex;
+  justify-self: flex-end;
+  column-gap: 20px;
+  margin-top: 15px;
+}
+
+.team__social-link {
+  display: block;
+  color: #0dceb5;
+  & svg {
+    --color1: currentColor;
+    transition: transform 0.1s ease;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
