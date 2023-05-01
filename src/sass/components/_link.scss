@@ -3,8 +3,16 @@
   color: $primary;
 
   &--underline {
-    text-decoration: underline;
     font-weight: 600;
+    background: linear-gradient(to right, currentColor 0%, currentColor 100%);
+    background-size: 50% 2px;
+    background-position: 0 95%;
+    background-repeat: no-repeat;
+    transition: background-size 300ms $cubic-bezier, color 300ms $cubic-bezier;
+  }
+
+  &--underline:hover {
+    background-size: 100% 2px;
   }
 
   &--white {
