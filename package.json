@@ -1,21 +1,21 @@
 {
-  "name": "template-practice",
+  "name": "ya-volonteer",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://github.com/smerch88/template-practice",
+  "homepage": "https://github.com/smerch88/ya-volonteer",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /template-practice/"
+    "build": "parcel build src/*.html --public-url /ya-volonteer/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smerch88/template-practice.git"
+    "url": "git+https://github.com/smerch88/ya-volonteer.git"
   },
   "keywords": [],
   "author": "Arsenii <maxarmyk@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/smerch88/template-practice/issues"
+    "url": "https://github.com/smerch88/ya-volonteer/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
