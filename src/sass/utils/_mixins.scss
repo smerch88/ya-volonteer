@@ -1,42 +1,49 @@
 // Шаблонні міксини для медіа
 
-@mixin mobile {
-    @media screen and (min-width: 480px) {
-        @content;
-    }
-}
-
-@mixin tablet {
-    @media screen and (min-width: 768px) {
-        @content;
-    }
-}
-
 @mixin desktop {
-    @media screen and (min-width: 1200px) {
-        @content;
-    }
+  @media screen and (min-width: 1560px) {
+    @content;
+  }
+}
+@mixin tablet-only {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile-only {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (min-width: 320px) {
+    @content;
+  }
 }
 
 @mixin retina {
-
-    @media (min-device-pixel-ratio: 2),
+  @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        @content;
-    }
+    @content;
+  }
 }
 
 // Міксин для медіа з налаштуванням
 
 @mixin min-media($size) {
-    @media screen and (min-width: $size) {
-        @content;
-    }
+  @media screen and (min-width: $size) {
+    @content;
+  }
 }
 
 // Міксин для калькуляції ширини
 
 @mixin calc($count) {
-    width: calc((100% - 30px * ($count - 1)) / $count);
+  width: calc((100% - 30px * ($count - 1)) / $count);
 }
