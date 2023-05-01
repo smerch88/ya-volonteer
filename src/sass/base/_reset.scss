@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+body {
+}
+
 p,
 h1,
 h2,
@@ -33,11 +36,14 @@ address {
 
 a {
   text-decoration: none;
+  display: block;
+  color: currentColor;
 }
 
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .list {
