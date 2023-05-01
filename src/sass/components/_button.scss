@@ -1,16 +1,55 @@
 .button {
   display: block;
-  padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--50);
+  box-sizing: initial;
+  padding: 24px 23px;
+  width: 306px;
 
-  color: var(--wp--preset--color--foreground);
-  background-color: var(--wp--preset--color--button-primary);
-
-  font-size: var(--wp--preset--font-size--small);
+  font-family: 'Inter';
+  font-style: normal;
   font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: $secondary;
+  border-radius: 10px;
+  border-width: 4px;
+  border-style: solid;
 
-  transition: all 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: background-color 300ms $cubic-bezier, color 300ms $cubic-bezier;
+
+  &--green {
+    background-color: $accent_green;
+    border-color: $accent_green;
+  }
+
+  &--blue {
+    background-color: $accent_blue;
+    border-color: $accent_blue;
+  }
 
   &:hover {
-    background-color: var(--wp--preset--color--button-secondary);
+    background-color: $secondary;
+  }
+
+  &--green:hover {
+    color: $accent_green;
+  }
+
+  &--blue:hover {
+    color: $accent_blue;
+  }
+
+  &:disabled {
+    color: $button_disabled_text_color;
+  }
+
+  &--green:disabled {
+    background-color: $button_disabled_bg_green;
+    border-color: $button_disabled_bg_green;
+  }
+
+  &--blue:disabled {
+    background-color: $button_disabled_bg_blue;
+    border-color: $button_disabled_bg_blue;
   }
 }
