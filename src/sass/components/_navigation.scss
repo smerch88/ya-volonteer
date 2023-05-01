@@ -1,0 +1,14 @@
+.navigation__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0px;
+  gap: 60px;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: $main-font-weight;
+  font-size: 20px;
+  line-height: 1.2;
+  color: $dark;
+}
