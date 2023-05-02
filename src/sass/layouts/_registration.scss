@@ -1,105 +1,57 @@
 .registration {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding: 40px 0px;
 
-  background-color: var(--wp--preset--color--background-secondary);
-}
-
-.container {
-  padding-left: 13px;
-  padding-right: 13px;
-}
-.registration__title {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: calc(58 / 48);
-
-  text-align: center;
-  color: $primary;
-  margin-bottom: 48px;
-}
-.registration__paragraph {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1.5;
-  text-align: center;
-
-  color: $primary;
-  margin: 0 198px 70px 198px;
-}
-
-.registration__list {
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
-}
-
-.registration__list--item {
-  display: flex;
-  height: 628px;
-
-  &:nth-child(odd) {
-    flex-direction: row;
-    & .registration__card-info {
-      display: flex;
-      flex-direction: column;
-      width: 804px;
-      padding: 62px 0 62px 48px;
-    }
-  }
-  &:nth-child(even) {
-    flex-direction: row-reverse;
-    & .registration__card-info {
-      display: flex;
-      flex-direction: column;
-      width: 804px;
-      padding: 0 131px 0 0;
-    }
-  }
-}
-
-.registration__card--image {
-  width: 756px;
-}
-
-.registration__card--title {
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 1.5;
-  color: $primary;
-  margin-bottom: 24px;
-}
-.registration__card--text {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.5;
-  color: $primary;
-  margin-bottom: 48px;
-}
-
-.registration__sublist {
-  list-style-type: none;
-  margin-bottom: 48px;
-}
-
-.registration__sublist--item {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.5;
-  color: $primary;
-  padding: 0 0 0 16px;
-  margin-left: 25px;
-  &::marker {
-    width: 24px;
-    height: 24px;
-    content: url(../images/registration/listmarker_green.svg);
-  }
-  &:not(:last-child) {
+  &__title {
+    text-align: center;
     margin-bottom: 16px;
   }
-}
-.registration__btn {
-  padding-left: 0;
-  height: 72px;
+
+  &__paragraph {
+    text-align: center;
+    &--big {
+      margin-bottom: 24px;
+    }
+    &--small {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__margin {
+    &--big {
+      margin-bottom: 24px;
+    }
+    &--small {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__thumb {
+    height: 240px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+
+  &__steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__step {
+    padding-left: 16px;
+    margin-left: 24px;
+    &::marker {
+      content: url(../images/registration/listmarker_green.svg);
+    }
+  }
 }
