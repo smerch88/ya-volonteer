@@ -4,10 +4,14 @@ body {
   color: $primary;
   font-family: $main-font;
   font-size: 20px;
-  $main-font-weight: 400;
+  font-weight: $main-font-weight;
   line-height: 1.5;
 }
 
 .section {
-  padding: 100px 30px;
+  padding: 100px 0;
+
+  &--light-green {
+    background-color: $bg_secondary;
+  }
 }

@@ -1,31 +1,58 @@
 .advantages {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  background-color: var(--wp--preset--color--background-secondary);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: $bg_secondary;
+  @include desktop {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
 }
 
 .advantages__list {
   display: flex;
-  gap: 32px;
-}
-.advantages__list--item {
-  background-color: var(--wp--preset--color--background);
-  display: flex;
   flex-direction: column;
-  text-align: center;
-  align-items: center;
-  padding: 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+  @include tablet {
+    gap: 24px;
+    flex-direction: row;
+  }
+  & li {
+    flex-basis: calc((100% - 0px) / 1);
+    background-color: $secondary;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+    @include tablet {
+      gap: 16px;
+      padding: 16px;
+      flex-basis: calc((100% - 24px) / 2);
+    }
+    @include desktop {
+      gap: 24px;
+      padding: 24px;
+      flex-basis: calc((100% - 72px) / 4);
+    }
+  }
+  & li:hover {
+    box-shadow: 1px 4px 20px -2px #0003;
+    transform: translateY(-8px);
+  }
+
+  & > li > h3 {
+    max-width: 200px;
+  }
+
+  & > li:nth-child(3) > h3 {
+    max-width: 300px;
+  }
 }
 
 .advantages__list--header {
   position: relative;
-  margin-top: 10px;
-  color: var(--wp--preset--color--foreground);
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.36;
-  font-family: var(--wp--preset--font-family--outfit);
-  text-transform: capitalize;
 }
 
 .advantages__list--header::before {
@@ -38,68 +65,11 @@
   background-color: #000;
   visibility: hidden;
   transform: scaleX(0);
-  transition: all 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+  transition: all 0.25s $cubic-bezier 0.3s;
 }
 
 .advantages__list--header:hover::before {
   visibility: visible;
   left: 0;
-  transform: scaleX(1);
-}
-
-.advantages__list--text {
-  margin-top: 10px;
-  color: var(--wp--preset--color--body-text);
-  font-size: 18px;
-  line-height: 1.67;
-  font-weight: 400;
-  font-family: var(--wp--preset--font-family--inter);
-}
-
-.advantages__list--footer {
-  position: relative;
-  margin-top: 10px;
-  color: var(--wp--preset--color--foreground);
-  font-family: var(--wp--preset--font-family--inter);
-  font-size: 18px;
-  line-height: 1.67;
-  font-weight: 700;
-}
-
-.advantages__list--footer .underline {
-  position: relative;
-}
-
-.advantages__list--footer .underline::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -4px;
-  background-color: #000;
-  transition: all 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
-}
-
-.animation {
-  position: relative;
-}
-
-.animation::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -4px;
-  left: -60%;
-  background-color: #000;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
-}
-
-.animation:hover::before {
-  visibility: visible;
-  width: 110%;
-  left: -10%;
   transform: scaleX(1);
 }

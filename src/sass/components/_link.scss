@@ -1,7 +1,25 @@
 .link {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.50;
-  text-decoration-line: underline;
+  transition: color 300ms $cubic-bezier;
+  color: $primary;
+
+  &--underline {
+    font-weight: 600;
+    background: linear-gradient(to right, currentColor 0%, currentColor 100%);
+    background-size: 50% 2px;
+    background-position: 0 95%;
+    background-repeat: no-repeat;
+    transition: background-size 300ms $cubic-bezier, color 300ms $cubic-bezier;
+  }
+
+  &--underline:hover {
+    background-size: 100% 2px;
+  }
+
+  &--white {
+    color: $secondary;
+  }
+
+  &:hover {
+    color: $accent_green;
+  }
 }

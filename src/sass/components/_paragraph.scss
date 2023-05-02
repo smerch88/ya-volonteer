@@ -4,6 +4,9 @@
   font-size: 14px;
   text-align: left;
   max-width: 286px;
+  @include mobile {
+    max-width: 480px;
+  }
   @include tablet {
     font-size: 20px;
     max-width: 680px;
