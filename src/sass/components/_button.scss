@@ -1,20 +1,29 @@
 .button {
   display: block;
-  box-sizing: initial;
-  padding: 24px 23px;
-  width: 306px;
+  padding: 20px;
+  width: 100%;
 
-  font-family: 'Inter';
+  font-family: $main-font;
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
+  line-height: 1.2;
+
   text-align: center;
   color: $secondary;
   border-radius: 10px;
   border-width: 4px;
   border-style: solid;
   cursor: pointer;
+
+  @include tablet {
+    width: 328px;
+    font-size: 20px;
+  }
+
+  @include desktop {
+    padding: 24px 20px;
+    min-width: 306px;
+  }
 
   transition: background-color 300ms $cubic-bezier, color 300ms $cubic-bezier;
 
