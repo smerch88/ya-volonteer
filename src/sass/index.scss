@@ -1,8 +1,11 @@
+// utils
 @import './utils/mixins';
 @import './utils/variables';
 @import './utils/hidden';
+// base
 @import './base/reset';
 @import './base/common';
+// components
 @import './components/container';
 @import './components/button';
 @import './layouts/header';
@@ -18,4 +21,9 @@
 @import './components/link';
 @import './components/title__second';
 @import './components/title__third';
+
 @import './components/navigation';
+@import './components/navigation';
+// layouts
+@import './layouts/useful-advice';
+
