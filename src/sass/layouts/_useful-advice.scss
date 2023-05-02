@@ -1,0 +1,124 @@
+.advice__title {
+  margin-bottom: 80px;
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.advice__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 320px);
+  grid-gap: 16px;
+  grid-template-areas: 'pic1' 'pic2' 'pic3' 'pic4' 'pic5' 'pic6';
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 338px);
+    grid-gap: 24px 24px;
+    grid-template-areas:
+      'pic1 pic1 pic2'
+      'pic3 pic4 pic4'
+      'pic5 pic5 pic6';
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(27, 1fr);
+    grid-template-rows: repeat(2, 338px);
+    grid-template-areas:
+      'pic1 pic1 pic1 pic1 pic1 pic1 pic1 pic1 pic1 pic1 pic1 pic1 pic2 pic2 pic2 pic2 pic2 pic2 pic2 pic2 pic3 pic3 pic3 pic3 pic3 pic3 pic3 pic3'
+      'pic4 pic4 pic4 pic4 pic4 pic4 pic4 pic4 pic5 pic5 pic5 pic5 pic5 pic5 pic5 pic5 pic6 pic6 pic6 pic6 pic6 pic6 pic6 pic6 pic6 pic6 pic6 pic6';
+  }
+}
+
+.advice__item {
+  position: relative;
+  background-color: rgba(45, 44, 44);
+  overflow: hidden;
+
+  &--grid1 {
+    grid-area: pic1;
+  }
+  &--grid2 {
+    grid-area: pic2;
+  }
+  &--grid3 {
+    grid-area: pic3;
+  }
+  &--grid4 {
+    grid-area: pic4;
+  }
+  &--grid5 {
+    grid-area: pic5;
+  }
+  &--grid6 {
+    grid-area: pic6;
+  }
+
+  &-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 1000ms ease;
+    background: linear-gradient(
+      180deg,
+      rgba(19, 19, 19, 0) 28.65%,
+      rgba(19, 19, 19, 0.520833) 72.4%,
+      #131313 100%
+    );
+  }
+
+  &-img::after,
+  &-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover &-img::after {
+    opacity: 0.7;
+  }
+
+  &-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: transform 1000ms ease;
+  }
+
+  &:hover &-img {
+    transform: scale(1.1);
+  }
+
+  &--grid1 &-img {
+    background-image: url('../images/useful-advice/bg-img-1.jpg');
+  }
+  &--grid2 &-img {
+    background-image: url('../images/useful-advice/bg-img-2.jpg');
+  }
+  &--grid3 &-img {
+    background-image: url('../images/useful-advice/bg-img-3.jpg');
+  }
+  &--grid4 &-img {
+    background-image: url('../images/useful-advice/bg-img-4.jpg');
+  }
+  &--grid5 &-img {
+    background-image: url('../images/useful-advice/bg-img-5.jpg');
+  }
+  &--grid6 &-img {
+    background-image: url('../images/useful-advice/bg-img-6.jpg');
+  }
+}
+
+.advice__text {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  right: 32px;
+  font-weight: 600;
+  color: $secondary;
+}

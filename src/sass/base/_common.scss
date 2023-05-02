@@ -9,5 +9,9 @@ body {
 }
 
 .section {
-  padding: 100px 30px;
+  padding: 100px 0;
+
+  &--light-green {
+    background-color: $bg_secondary;
+  }
 }
