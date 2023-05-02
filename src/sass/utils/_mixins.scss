@@ -51,9 +51,7 @@
 // Міксин для екранів з меншою шириною
 
 @mixin max-media($size) {
-    @media screen and (max-width: $size) {
-        @content;
-    }
+  @media screen and (max-width: $size) {
+    @content;
+  }
 }
-
-
