@@ -8,6 +8,12 @@
 // components
 @import './components/container';
 @import './components/button';
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/team';
+@import './layouts/advantages';
+@import './layouts/paragraph__section';
+@import './layouts/registration';
 @import './components/title__main';
 @import './components/paragraph';
 @import './components/card__title';
@@ -15,6 +21,9 @@
 @import './components/link';
 @import './components/title__second';
 @import './components/title__third';
+
+@import './components/navigation';
 @import './components/navigation';
 // layouts
 @import './layouts/useful-advice';
+
