@@ -19,6 +19,7 @@
   }
   & li {
     flex-basis: calc((100% - 0px) / 1);
+    transition: transform 0.25s $cubic-bezier 0.3s;
     background-color: $secondary;
     display: flex;
     flex-direction: column;
