@@ -1,6 +1,12 @@
 .title__second {
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 20px;
   line-height: 1.21;
+  @include tablet {
+    font-size: 36px;
+  }
+  @include desktop {
+    font-size: 48px;
+  }
 }

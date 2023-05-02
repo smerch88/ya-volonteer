@@ -1,6 +1,15 @@
 .title__main {
   font-style: normal;
   font-weight: 700;
-  font-size: 86px;
   line-height: 1.2;
+  font-size: 28px;
+  max-width: 286px;
+  @include tablet {
+    font-size: 48px;
+    max-width: 680px;
+  }
+  @include desktop {
+    font-size: 86px;
+    max-width: 747px;
+  }
 }

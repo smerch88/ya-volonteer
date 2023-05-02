@@ -1,7 +1,10 @@
 .card__text {
   font-style: normal;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   align-items: center;
   text-align: center;
+   @include tablet {
+    font-size: 16px;
+  }
 }

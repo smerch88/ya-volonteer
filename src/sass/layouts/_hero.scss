@@ -1,0 +1,121 @@
+.hero {
+  position: relative;
+  background-color: $secondary;
+  margin-bottom: 40px;
+  @include tablet {
+    margin-bottom: 88px;
+  }
+  @include desktop {
+    background-image: url(../images/hero/bg-desktop.svg);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+  }
+}
+
+.hero::before {
+  content: '';
+  display: none;
+  @include desktop {
+    position: absolute;
+    display: block;
+    background-image: url(../images/hero/cloud.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 130px;
+    height: 25px;
+    top: 82px;
+    left: 40%;
+  }
+}
+
+.hero::after {
+  content: '';
+  display: none;
+  @include desktop {
+    position: absolute;
+    display: block;
+    background-image: url(../images/hero/cloud-big.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 340px;
+    height: 62px;
+    bottom: 66px;
+    left: 0;
+  }
+}
+
+.hero__container {
+  display: flex;
+  height: 580px;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-image: url(../images/hero/bg-mobile.svg);
+  @include tablet {
+    height: 784px;
+    background-image: url(../images/hero/bg-tablet.svg);
+    background-position: center bottom 104px;
+  }
+  @include desktop {
+    background-image: none;
+    justify-content: center;
+  }
+}
+
+.hero__content {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  @include desktop {
+    align-items: start;
+  }
+}
+
+.hero__title {
+  margin-bottom: 16px;
+  @include tablet {
+    margin-bottom: 32px;
+  }
+  @include desktop {
+  }
+}
+
+.hero__paragraph {
+  margin-bottom: 24px;
+  @include tablet {
+    margin-bottom: 485px;
+  }
+  @include desktop {
+    margin-bottom: 56px;
+  }
+}
+
+.hero__button--container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  @include tablet {
+    gap: 24px;
+  }
+  @include desktop {
+    gap: 32px;
+  }
+}
+
+.hero__button {
+  font-size: 16px;
+  padding: 10px;
+  @include tablet {
+    font-size: 20px;
+    padding: 20px;
+  }
+   @include desktop {
+    width: 310px;
+  }
+}

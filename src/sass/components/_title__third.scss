@@ -1,6 +1,12 @@
 .title__third {
   font-style: normal;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 18px;
   line-height: 1.5;
+  @include tablet {
+    font-size: 28px;
+  }
+  @include desktop {
+    font-size: 36px;
+  }
 }
