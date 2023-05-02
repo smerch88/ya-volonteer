@@ -1,6 +1,17 @@
 .paragraph {
-font-style: normal;
-font-size: 24px;
-line-height: 1.50;
-width: 704px;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: 14px;
+  text-align: left;
+  max-width: 286px;
+  @include tablet {
+    font-size: 20px;
+    max-width: 680px;
+    text-align: justify;
+  }
+  @include desktop {
+    font-size: 24px;
+    max-width: 704px;
+    text-align: left;
+  }
 }

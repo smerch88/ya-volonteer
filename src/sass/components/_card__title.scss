@@ -1,9 +1,12 @@
 .card__title {
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 1.50;
+  font-size: 18px;
+  line-height: 1.5;
   align-items: center;
   text-align: center;
   color: $dark;
+  @include tablet {
+    font-size: 20px;
+  }
 }
