@@ -1,4 +1,4 @@
-import { dropdownList, closeDropdownMenu } from './dropdown-btn';
+import { dropdownList, handleCloseDropdownMenu } from './dropdown-btn';
 
 const openMenuButton = document.querySelector('.menu-btn');
 const closeMenuButton = document.querySelector('.cross');
@@ -22,7 +22,7 @@ export function closeMenu() {
   closeMenuButton.removeEventListener('click', closeMenu);
 
   if (dropdownList.classList.contains('header__dropdown-list--open')) {
-    closeDropdownMenu();
+    handleCloseDropdownMenu();
   }
 
   if (window.innerWidth > 768) return;

@@ -1,5 +1,5 @@
-import { dropdownList, closeDropdownMenu } from './dropdown-btn';
-import { menuBackdrop, closeMenu } from './menu';
+import { dropdownList, handleCloseDropdownMenu } from './dropdown-btn';
+import { menuBackdrop, handleCloseMenu } from './menu';
 
 let prevScrollPos = window.pageYOffset;
 
@@ -12,11 +12,11 @@ window.onscroll = function () {
     document.querySelector('.header').classList.add('header--hidden');
 
     if (dropdownList.classList.contains('header__dropdown-list--open')) {
-      closeDropdownMenu();
+      handleCloseDropdownMenu();
     }
 
     if (menuBackdrop.classList.contains('mobile-menu__backdrop--open')) {
-      closeMenu();
+      handleCloseMenu();
     }
   }
 
