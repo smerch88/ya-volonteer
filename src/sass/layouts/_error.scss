@@ -1,4 +1,76 @@
-.404-container {
+.container404 {
   padding-top: 80px;
   padding-bottom: 80px;
+}
+.head404,
+.text404 {
+  text-align: center;
+}
+.search404 {
+  display: block;
+  margin-top: 0em;
+  width: 85%;
+}
+.search-row {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.head404 {
+  font-size: clamp(4rem, 40vw, 20rem);
+  font-weight: 200;
+  line-height: 1;
+  margin: 0;
+  font-family: Outfit, sans-serif;
+  line-height: 320px;
+
+  text-align: center;
+}
+.zeroerror {
+  color: rgb(1, 218, 204);
+}
+.text404 {
+  box-sizing: border-box;
+  color: rgb(113, 113, 113);
+  display: block;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-right: 94px;
+  margin-left: 94px;
+}
+.button404 {
+  background-color: rgb(13, 168, 140);
+  cursor: pointer;
+  font-family: Outfit, sans-serif;
+
+  font-size: 24px;
+  border-end-end-radius: 1px;
+  font-weight: 500;
+  max-height: 48px;
+  padding-bottom: 19px;
+  padding-top: 4px;
+  border: none;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: center;
+}
+
+.input404 {
+  width: 615px;
+  text-transform: none;
+  padding-top: 4px;
+  padding-left: 16px;
+  padding-right: 0px;
+  padding-bottom: 4px;
+  max-height: 48px;
+  line-height: 48px;
+}
+.search404,
+.search-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-height: 48px;
 }
