@@ -1,6 +1,6 @@
 .advice__title {
   margin-bottom: 80px;
-  font-family: 'Inter';
+  font-family: $main-font;
   font-weight: 600;
   font-size: 40px;
   line-height: 1.2;
@@ -10,19 +10,19 @@
 .advice__list {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 320px);
+  grid-template-rows: repeat(6, 192px);
   grid-gap: 16px;
   grid-template-areas: 'pic1' 'pic2' 'pic3' 'pic4' 'pic5' 'pic6';
 
   @include tablet {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 338px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 292px);
     grid-gap: 24px 24px;
     grid-template-areas:
-      'pic1 pic1 pic2'
-      'pic3 pic4 pic4'
-      'pic5 pic5 pic6';
+      'pic1 pic2'
+      'pic3 pic4'
+      'pic5 pic6';
   }
 
   @include desktop {
@@ -120,5 +120,16 @@
   left: 32px;
   right: 32px;
   font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
   color: $secondary;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  @include desktop {
+    font-size: 20px;
+  }
 }
