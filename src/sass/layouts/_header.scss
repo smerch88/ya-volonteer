@@ -126,6 +126,7 @@
   transition: all 300ms $cubic-bezier;
   @include desktop {
     flex-direction: row;
+    align-items: center;
     column-gap: 60px;
     overflow-x: visible;
   }
@@ -192,7 +193,8 @@
     background-color: $secondary;
 
     &--open,
-    .dropdown-btn:hover + & {
+    .dropdown-btn:hover + &,
+    &:hover {
       opacity: 1;
       transform: translateY(calc(100% + 18px)) rotateX(0);
     }
