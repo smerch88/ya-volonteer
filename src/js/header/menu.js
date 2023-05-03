@@ -4,22 +4,23 @@ const openMenuButton = document.querySelector('.menu-btn');
 const closeMenuButton = document.querySelector('.cross');
 export const menuBackdrop = document.querySelector('.mobile-menu__backdrop');
 
-function openMenu() {
+function handleOpenMenu() {
   menuBackdrop.classList.add('mobile-menu__backdrop--open');
 
-  closeMenuButton.addEventListener('click', closeMenu);
-  openMenuButton.removeEventListener('click', openMenu);
+  closeMenuButton.addEventListener('click', handleCloseMenu);
+  openMenuButton.removeEventListener('click', handleOpenMenu);
+  document.body.addEventListener('click', handleCloseMenuOnAnyClick);
 
   if (window.innerWidth > 768) return;
 
   document.body.style.overflow = 'hidden';
 }
 
-export function closeMenu() {
+export function handleCloseMenu() {
   menuBackdrop.classList.remove('mobile-menu__backdrop--open');
 
-  openMenuButton.addEventListener('click', openMenu);
-  closeMenuButton.removeEventListener('click', closeMenu);
+  openMenuButton.addEventListener('click', handleOpenMenu);
+  closeMenuButton.removeEventListener('click', handleCloseMenu);
 
   if (dropdownList.classList.contains('header__dropdown-list--open')) {
     handleCloseDropdownMenu();
@@ -30,4 +31,14 @@ export function closeMenu() {
   document.body.style.overflow = 'auto';
 }
 
-openMenuButton.addEventListener('click', openMenu);
+function handleCloseMenuOnAnyClick(e) {
+  const isApplyTarget =
+    !e.target.closest('.mobile-menu__backdrop') &&
+    !e.target.closest('.menu-btn');
+
+  if (!isApplyTarget) return;
+  handleCloseMenu();
+  document.body.removeEventListener('click', handleCloseMenuOnAnyClick);
+}
+
+openMenuButton.addEventListener('click', handleOpenMenu);
