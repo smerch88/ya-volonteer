@@ -1,4 +1,5 @@
 import { dropdownList, closeDropdownMenu } from './dropdown-btn';
+import { menuBackdrop, closeMenu } from './menu';
 
 let prevScrollPos = window.pageYOffset;
 
@@ -12,6 +13,10 @@ window.onscroll = function () {
 
     if (dropdownList.classList.contains('header__dropdown-list--open')) {
       closeDropdownMenu();
+    }
+
+    if (menuBackdrop.classList.contains('mobile-menu__backdrop--open')) {
+      closeMenu();
     }
   }
 

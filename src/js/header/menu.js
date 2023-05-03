@@ -2,7 +2,7 @@ import { dropdownList, closeDropdownMenu } from './dropdown-btn';
 
 const openMenuButton = document.querySelector('.menu-btn');
 const closeMenuButton = document.querySelector('.cross');
-const menuBackdrop = document.querySelector('.mobile-menu__backdrop');
+export const menuBackdrop = document.querySelector('.mobile-menu__backdrop');
 
 function openMenu() {
   menuBackdrop.classList.add('mobile-menu__backdrop--open');
@@ -15,7 +15,7 @@ function openMenu() {
   document.body.style.overflow = 'hidden';
 }
 
-function closeMenu() {
+export function closeMenu() {
   menuBackdrop.classList.remove('mobile-menu__backdrop--open');
 
   openMenuButton.addEventListener('click', openMenu);
