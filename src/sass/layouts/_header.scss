@@ -1,5 +1,15 @@
 .header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $secondary;
   box-shadow: 0 0 5px $accent_green;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms $cubic-bezier, transform 300ms $cubic-bezier;
+
   @include mobile-only {
     padding: 20px 0;
   }
@@ -8,12 +18,10 @@
     padding: 32px 0;
   }
 
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: $secondary;
+  &--hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
 }
 
 .header__container {

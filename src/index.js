@@ -1,4 +1,5 @@
 import './js/header/menu';
+import './js/header/header-hidden';
 import './js/header/dropdown-btn';
 
 const { height: pageHeaderHeight } = document
