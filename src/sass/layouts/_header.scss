@@ -1,9 +1,17 @@
 .header {
+  box-shadow: 0 0 5px $accent_green;
+  @include mobile-only {
+    padding: 20px 0;
+  }
+
+  @include tablet-only {
+    padding: 32px 0;
+  }
+
   position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
-  padding: 20px 0;
   width: 100%;
   background-color: $secondary;
 }
@@ -18,17 +26,31 @@
   display: flex;
   align-items: center;
   padding: 0;
+
   @include desktop {
     display: none;
   }
 }
 
 .burger {
-  width: 18px;
-  height: 10px;
+  @include max-media(1559px) {
+    width: 18px;
+    height: 10px;
+
+    @include tablet {
+    }
+  }
 }
 
 .mobile-menu__backdrop {
+  @include max-media(1559px) {
+    transform: translateX(110%);
+    transition: transform 300ms $cubic-bezier;
+    &--open {
+      transform: translateX(0);
+    }
+  }
+
   @include mobile-only {
     z-index: 10;
     position: fixed;
@@ -38,12 +60,12 @@
     height: 100vh;
 
     background-color: #0c5e3766;
+  }
 
-    transform: translateX(110%);
-    transition: transform 300ms $cubic-bezier;
-    &--open {
-      transform: translateX(0);
-    }
+  @include tablet-only {
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 }
 
@@ -75,6 +97,8 @@
 }
 
 .cross {
+  stroke: currentColor;
+
   @include max-media(1559px) {
     position: absolute;
     top: 28px;
@@ -94,6 +118,8 @@
   transition: all 300ms $cubic-bezier;
   @include desktop {
     flex-direction: row;
+    column-gap: 60px;
+    overflow-x: visible;
   }
 }
 
@@ -101,7 +127,24 @@
   position: relative;
 }
 
+.dropdown-btn {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  &__icon {
+    stroke: currentColor;
+    transition: transform 300ms $cubic-bezier;
+  }
+
+  &.active &__icon {
+    transform: rotateX(180deg);
+  }
+}
+
 .header__nav-link {
+  @include desktop {
+    padding: 48px 0;
+  }
 }
 
 .header__dropdown-list {
@@ -111,36 +154,36 @@
   margin-top: 20px;
   padding-left: 16px;
   gap: 16px;
-
   opacity: 0;
-  transform: translateX(-100%);
-  transform-origin: top;
   transition: transform 300ms $cubic-bezier, opacity 100ms $cubic-bezier;
+
+  @include max-media(1559px) {
+    transform: rotateX(90deg);
+    transform-origin: top;
+  }
 
   &--open {
     position: relative;
     opacity: 1;
-    transform: translateX(0);
+    transform: rotateX(0);
   }
 
   @include desktop {
-    bottom: 0;
+    position: absolute;
+    bottom: 48px;
     left: 0;
     margin: 0;
     z-index: 10;
-    transform: translateY(calc(100% + 18px));
+    transform-origin: top;
+    transform: translateY(calc(100% + 18px)) rotateX(90deg);
     padding: 16px;
     width: max-content;
     border: 1px solid $accent_green;
     border-radius: 8px;
     background-color: $secondary;
-  }
-}
 
-.link svg {
-  stroke: currentColor;
-  transition: transform 300ms $cubic-bezier;
-}
-.link.active svg {
-  transform: rotateX(180deg);
+    &--open {
+      transform: translateY(calc(100% + 18px)) rotateX(0);
+    }
+  }
 }

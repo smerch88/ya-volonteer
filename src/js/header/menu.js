@@ -1,3 +1,5 @@
+import { dropdownList, closeDropdownMenu } from './dropdown-btn';
+
 const openMenuButton = document.querySelector('.menu-btn');
 const closeMenuButton = document.querySelector('.cross');
 const menuBackdrop = document.querySelector('.mobile-menu__backdrop');
@@ -18,6 +20,10 @@ function closeMenu() {
 
   openMenuButton.addEventListener('click', openMenu);
   closeMenuButton.removeEventListener('click', closeMenu);
+
+  if (dropdownList.classList.contains('header__dropdown-list--open')) {
+    closeDropdownMenu();
+  }
 
   if (window.innerWidth > 768) return;
 
