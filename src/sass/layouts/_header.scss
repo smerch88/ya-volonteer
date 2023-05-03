@@ -1,3 +1,13 @@
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  width: 100%;
+  background-color: $secondary;
+}
+
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -5,9 +15,17 @@
 }
 
 .menu-btn {
+  display: flex;
+  align-items: center;
+  padding: 0;
   @include desktop {
     display: none;
   }
+}
+
+.burger {
+  width: 18px;
+  height: 10px;
 }
 
 .mobile-menu__backdrop {
@@ -72,6 +90,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow-x: hidden;
+  transition: all 300ms $cubic-bezier;
   @include desktop {
     flex-direction: row;
   }
@@ -81,15 +101,29 @@
   position: relative;
 }
 
+.header__nav-link {
+}
+
 .header__dropdown-list {
+  position: absolute;
   display: flex;
   flex-direction: column;
   margin-top: 20px;
   padding-left: 16px;
   gap: 16px;
 
+  opacity: 0;
+  transform: translateX(-100%);
+  transform-origin: top;
+  transition: transform 300ms $cubic-bezier, opacity 100ms $cubic-bezier;
+
+  &--open {
+    position: relative;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   @include desktop {
-    position: absolute;
     bottom: 0;
     left: 0;
     margin: 0;

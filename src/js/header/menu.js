@@ -7,6 +7,10 @@ function openMenu() {
 
   closeMenuButton.addEventListener('click', closeMenu);
   openMenuButton.removeEventListener('click', openMenu);
+
+  if (window.innerWidth > 768) return;
+
+  document.body.style.overflow = 'hidden';
 }
 
 function closeMenu() {
@@ -14,6 +18,10 @@ function closeMenu() {
 
   openMenuButton.addEventListener('click', openMenu);
   closeMenuButton.removeEventListener('click', closeMenu);
+
+  if (window.innerWidth > 768) return;
+
+  document.body.style.overflow = 'auto';
 }
 
 openMenuButton.addEventListener('click', openMenu);
