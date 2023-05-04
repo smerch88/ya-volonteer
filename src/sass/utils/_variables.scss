@@ -14,6 +14,8 @@ $button_disabled_bg_green: #68bf95;
 $button_disabled_bg_blue: #5970bd;
 $button_disabled_text_color: #bbbbbb;
 $error: #ff3737;
+$placeholder: #979797;
+
 
 // fonts
 $main-font: 'Inter', sans-serif;
@@ -21,3 +23,11 @@ $main-font-weight: 400;
 
 //  animation
 $cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+
+// form input elements
+$input-box-shadow: rgba(158, 158, 158, 0.25);
+$input-label-text-color:  #9b9faa;
+$input-activetext-color: rgba(33, 37, 41, 0.8);
+$input-border-color: #bdbdbd;
+$input-border-unactive: #e0e0e0;
+$input-bgcolor-white: #ffffff;

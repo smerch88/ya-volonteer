@@ -1,5 +1,5 @@
 .feedback {
-background-color: $bg_secondary;
+  background-color: $bg_secondary;
   padding-top: 40px;
   padding-bottom: 40px;
   @include tablet {
@@ -12,34 +12,42 @@ background-color: $bg_secondary;
   }
 }
 .feedback__wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    // align-items: center;
-    // justify-content: center;
-    gap: 24px;
-  
-    @include tablet {
-      gap: 48px;
-    }
-    @include desktop {
-      gap: 0;
-    }
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @include tablet {
+    gap: 48px;
+  }
+  @include desktop {
+    flex-direction: row;
+    gap: 0;
+  }
 }
 
-// .feedback__info-wrapper {
-// }
+.feedback__info-wrapper {
+  min-height: 156px;
+  @include tablet {
+    text-align: left;
+    padding-right: 28px;
+  }
+  @include desktop {
+    flex-basis: 50%;
+    padding: 71px 140px 71px 0;
+  }
+}
 
 .feedback__title {
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: calc(24 / 20);
+  text-align: center;
   margin-bottom: 24px;
   color: $primary;
   @include tablet {
     font-size: 36px;
     line-height: calc(44 / 36);
+    text-align: left;
     margin-bottom: 32px;
   }
   @include desktop {
@@ -49,80 +57,74 @@ background-color: $bg_secondary;
   }
 }
 .feedback__paragraph {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: calc(24 / 16);
-    color: $primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  color: $primary;
 
-    @include tablet {
-      font-size: 20px;
-
-
-    }
-    @include desktop {
-      font-size: 24px;
-
-    }
+  @include tablet {
+    font-size: 20px;
+  }
+  @include desktop {
+    font-size: 24px;
+  }
 }
-// .feedback__inputform-wrapper {
-// }
-// .feedback_input-name {
-// }
-// .feedback_input-phone {
-// }
-// .feedback_input-question {
-// }
+.feedback__inputform-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  @include desktop {
+    flex-basis: 50%;
+  }
+}
+.feedback__inputform {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
 
-// .form {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 40px;
-  
-//     margin-bottom: 60px;
-//     @media (min-width: 768px) {
-//       width: 395px;
-//     }
-//     @media (min-width: 1280px) {
-//     }
-//   }
-  
-//   .inputForm {
-//     width: 280px;
-//     height: 36px;
-  
-//     text-align: start;
-//     font-size: 14px;
-//     font-weight: 700;
-//     line-height: calc(17 / 14);
-//     letter-spacing: 0.04em;
-  
-//     border: none;
-//     border-bottom: 1px solid var(--input-border-unactive);
-  
-//     color: var(--input-label-text-color);
-  
-//     @media (min-width: 768px) {
-//       width: 240px;
-//     }
-//   }
-  
-//   .inputForm:focus {
-//     outline: 0;
-//     box-shadow: 0 0 0 0.2rem var(--input-box-shadow);
-  
-//     color: var(--input-activetext-color);
-//     background-color: var(--input-bgcolor-white);
-//     border-color: var(--input-border-color);
-//   }
-//   .btnBox {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-  
-//     @media (min-width: 768px) {
-//       display: flex;
-//       flex-direction: row;
-//       gap: 32px;
-//     }
-//   }
+.feedback_input {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  font-feature-settings: 'ss02' on;
+  text-align: start;
+  color: $primary;
+  border: 1px solid $card_bg_blue;
+  border-radius: 10px;
+
+  padding: 20px 16px;
+
+  transition: border-color 300ms $cubic-bezier,
+    background-color 300ms $cubic-bezier, color 300ms $cubic-bezier;
+  &::placeholder {
+    color: $placeholder;
+    font-size: 16px;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem $input-box-shadow;
+    color: $input-activetext-color;
+    background-color: $input-bgcolor-white;
+    border-color: $input-border-color;
+  }
+}
+.feedback_input-name,
+.feedback_input-phone {
+  height: 56px;
+}
+.feedback_input-question {
+  height: 92px;
+}
+.feedback__btn a {
+  @include tablet {
+    margin: 0 auto;
+    width: 328px;
+  }
+  @include desktop {
+    margin: 0 auto 0 0;
+    width: 380px;
+  }
+}
