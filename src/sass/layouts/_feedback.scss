@@ -1,0 +1,128 @@
+.feedback {
+background-color: $bg_secondary;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include tablet {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+  @include desktop {
+    padding-top: 124px;
+    padding-bottom: 124px;
+  }
+}
+.feedback__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    // align-items: center;
+    // justify-content: center;
+    gap: 24px;
+  
+    @include tablet {
+      gap: 48px;
+    }
+    @include desktop {
+      gap: 0;
+    }
+}
+
+// .feedback__info-wrapper {
+// }
+
+.feedback__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(24 / 20);
+  margin-bottom: 24px;
+  color: $primary;
+  @include tablet {
+    font-size: 36px;
+    line-height: calc(44 / 36);
+    margin-bottom: 32px;
+  }
+  @include desktop {
+    font-size: 48px;
+    line-height: calc(58 / 48);
+    margin-bottom: 24px;
+  }
+}
+.feedback__paragraph {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    color: $primary;
+
+    @include tablet {
+      font-size: 20px;
+
+
+    }
+    @include desktop {
+      font-size: 24px;
+
+    }
+}
+// .feedback__inputform-wrapper {
+// }
+// .feedback_input-name {
+// }
+// .feedback_input-phone {
+// }
+// .feedback_input-question {
+// }
+
+// .form {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 40px;
+  
+//     margin-bottom: 60px;
+//     @media (min-width: 768px) {
+//       width: 395px;
+//     }
+//     @media (min-width: 1280px) {
+//     }
+//   }
+  
+//   .inputForm {
+//     width: 280px;
+//     height: 36px;
+  
+//     text-align: start;
+//     font-size: 14px;
+//     font-weight: 700;
+//     line-height: calc(17 / 14);
+//     letter-spacing: 0.04em;
+  
+//     border: none;
+//     border-bottom: 1px solid var(--input-border-unactive);
+  
+//     color: var(--input-label-text-color);
+  
+//     @media (min-width: 768px) {
+//       width: 240px;
+//     }
+//   }
+  
+//   .inputForm:focus {
+//     outline: 0;
+//     box-shadow: 0 0 0 0.2rem var(--input-box-shadow);
+  
+//     color: var(--input-activetext-color);
+//     background-color: var(--input-bgcolor-white);
+//     border-color: var(--input-border-color);
+//   }
+//   .btnBox {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+  
+//     @media (min-width: 768px) {
+//       display: flex;
+//       flex-direction: row;
+//       gap: 32px;
+//     }
+//   }

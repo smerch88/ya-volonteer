@@ -11,22 +11,6 @@
   }
 }
 
-.registration__container {
-  width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin: 0 auto;
-
-  @include tablet {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  @include desktop {
-    padding-left: 180px;
-    padding-right: 180px;
-  }
-}
-
 .registration__title {
   font-style: normal;
   font-weight: 700;
@@ -182,7 +166,7 @@
   margin-bottom: 24px;
   @include tablet {
     gap: 8px;
-    margin-bottom: auto;
+    margin-bottom: 24px;
   }
   @include desktop {
     gap: 16px;
@@ -210,10 +194,3 @@
   }
 }
 
-.registration__btn {
-  padding: 0;
-  box-sizing: border-box;
-  & a {
-    height: 72px;
-  }
-}
