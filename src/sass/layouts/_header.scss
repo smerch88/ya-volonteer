@@ -28,6 +28,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include tablet-only {
+    position: relative;
+  }
 }
 
 .menu-btn {
@@ -44,18 +48,15 @@
   @include max-media(1559px) {
     width: 18px;
     height: 10px;
-
-    @include tablet {
-    }
   }
 }
 
 .mobile-menu__backdrop {
   @include max-media(1559px) {
-    transform: translateX(110%);
-    transition: transform 300ms $cubic-bezier;
+    transform: translateY(-110%);
+    transition: transform 300ms $cubic-bezier, opacity 300ms $cubic-bezier;
     &--open {
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
 
@@ -66,22 +67,38 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    opacity: 0;
 
-    background-color: #0c5e3766;
+    background: linear-gradient(#0c5e3766, #54aa8007);
+
+    &--open {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   @include tablet-only {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: -10px;
+    right: 24px;
   }
 }
 
 .header__nav {
+  &-container {
+    @include mobile-only {
+      width: 100%;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.19;
+
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
   @include max-media(1559px) {
     position: relative;
-    top: 0;
-    left: 0;
     padding: 40px;
 
     font-weight: 500;
@@ -91,7 +108,9 @@
     background-color: $secondary;
 
     @include mobile-only {
-      width: 100vw;
+      margin: 0 auto;
+      max-width: 480px;
+
       box-shadow: 0 1px 8px $accent_green;
       border-bottom-left-radius: 8px;
       border-bottom-right-radius: 8px;
@@ -106,11 +125,17 @@
 
 .cross {
   stroke: currentColor;
+  z-index: 11;
 
   @include max-media(1559px) {
     position: absolute;
     top: 28px;
-    right: 28px;
+    right: 16px;
+  }
+
+  @include tablet-only {
+    top: 16px;
+    right: 16px;
   }
 
   @include desktop {
