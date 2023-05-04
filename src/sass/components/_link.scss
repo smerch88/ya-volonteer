@@ -1,6 +1,7 @@
 .link {
   transition: color 300ms $cubic-bezier;
   color: $primary;
+  cursor: pointer;
 
   &--underline {
     font-weight: 600;

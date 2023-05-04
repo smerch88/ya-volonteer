@@ -16,10 +16,11 @@
 @import './components/title__second';
 @import './components/title__third';
 @import './components/navigation';
-@import './components/navigation';
 // layouts
+@import './layouts/header';
 @import './layouts/useful-advice';
 @import './layouts/advantages';
 @import './layouts/registration';
 @import './layouts/feedback';
 @import './layouts/hero';
+@import './layouts/financial-statement';
