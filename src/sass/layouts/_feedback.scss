@@ -86,29 +86,36 @@
 
 .feedback_input {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1;
   font-feature-settings: 'ss02' on;
   text-align: start;
   color: $primary;
-  border: 1px solid $card_bg_blue;
+  border: 1px solid $input_border_color;
   border-radius: 10px;
-
   padding: 20px 16px;
 
   transition: border-color 300ms $cubic-bezier,
     background-color 300ms $cubic-bezier, color 300ms $cubic-bezier;
   &::placeholder {
-    color: $placeholder;
+    color: $input_label_text_color;
     font-size: 16px;
   }
+  &--filling,
+  &--filled {
+    border-color: $input_border_color;
+  }
+  &--error {
+    border-color: $input_border_error;
+  }
+  &--enabled{
+    border-color: $card_bg_blue;
+  }
 
-  &:focus {
+  &:focus,
+  &:active {
     outline: 0;
-    box-shadow: 0 0 0 0.2rem $input-box-shadow;
-    color: $input-activetext-color;
-    background-color: $input-bgcolor-white;
-    border-color: $input-border-color;
+    border-color: $input_border_active;
   }
 }
 .feedback_input-name,
