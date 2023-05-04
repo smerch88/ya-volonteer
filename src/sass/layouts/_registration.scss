@@ -1,105 +1,196 @@
 .registration {
-  padding-top: 80px;
-  padding-bottom: 80px;
-
-  background-color: var(--wp--preset--color--background-secondary);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include tablet {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+  @include desktop {
+    padding-top: 124px;
+    padding-bottom: 124px;
+  }
 }
 
-.container {
-  padding-left: 13px;
-  padding-right: 13px;
-}
 .registration__title {
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
-  line-height: calc(58 / 48);
-
+  font-size: 36px;
+  line-height: calc(44 / 36);
   text-align: center;
+  margin-bottom: 40px;
   color: $primary;
-  margin-bottom: 48px;
+  @include tablet {
+    font-size: 36px;
+    line-height: calc(44 / 36);
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    font-size: 48px;
+    line-height: calc(58 / 48);
+    margin-bottom: 48px;
+  }
 }
+
 .registration__paragraph {
   font-weight: 400;
-  font-size: 24px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: calc(24 / 16);
   text-align: center;
-
   color: $primary;
-  margin: 0 198px 70px 198px;
+  margin-bottom: 24px;
+  @include tablet {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 48px;
+  }
+  @include desktop {
+    font-size: 24px;
+    line-height: calc(36 / 24);
+    max-height: 1163px;
+    margin-bottom: 70px;
+  }
 }
+
 
 .registration__list {
   display: flex;
   flex-direction: column;
-  gap: 70px;
-}
+  flex-wrap: wrap;
+  gap: 24px;
 
+  @include tablet {
+    gap: 48px;
+  }
+  @include desktop {
+    gap: 70px;
+  }
+}
 .registration__list--item {
   display: flex;
-  height: 628px;
+  flex-direction: column;
+  gap: 20px;
 
-  &:nth-child(odd) {
+  @include tablet {
     flex-direction: row;
-    & .registration__card-info {
-      display: flex;
-      flex-direction: column;
-      width: 804px;
-      padding: 62px 0 62px 48px;
+    gap: 24px;
+    &:nth-child(odd) {
+      min-height: 464px;
+    }
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      min-height: 596px;
     }
   }
-  &:nth-child(even) {
-    flex-direction: row-reverse;
-    & .registration__card-info {
-      display: flex;
-      flex-direction: column;
-      width: 804px;
-      padding: 0 131px 0 0;
-    }
+  @include desktop {
+    gap: 48px;
+    flex-direction: row;
+    min-height: 628px;
+    &:nth-child(odd) .registration__card-info {
+        padding-top: 62px;
+        padding-bottom: 62px;
+      } 
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+  }
+}
+}
+
+.registration__card--image-cover {
+  display: flex;
+  width: 100%;
+  min-height: 240px;
+
+  @include tablet {
+    flex-basis: calc(50% - 12px);
+  }
+  @include desktop {
+    flex-basis: calc(50% - 24px);
   }
 }
 
 .registration__card--image {
-  width: 756px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.registration__card-info {
+  display: flex;
+  flex-basis: calc(28% - 10px);
+  flex-direction: column;
+  min-height: 453px;
+  @include tablet {
+    flex-basis: calc(50% - 12px);
+  }
+  @include desktop {
+    flex-basis: calc(50% - 24px);
+  }
 }
 
 .registration__card--title {
   font-weight: 600;
-  font-size: 36px;
+  font-size: 18px;
   line-height: 1.5;
   color: $primary;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  @include tablet {
+    font-size: 28px;
+  }
+  @include desktop {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
 }
+
 .registration__card--text {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
   color: $primary;
-  margin-bottom: 48px;
+  margin-bottom: 16px;
+  @include tablet {
+    margin-bottom: 24px;
+  }
+  @include desktop {
+    font-size: 20px;
+    margin-bottom: 48px;
+  }
 }
 
 .registration__sublist {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   list-style-type: none;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
+  @include tablet {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  @include desktop {
+    gap: 16px;
+    margin-bottom: 48px;
+  }
 }
 
 .registration__sublist--item {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.5;
   color: $primary;
-  padding: 0 0 0 16px;
-  margin-left: 25px;
-  &::marker {
-    width: 24px;
-    height: 24px;
-    content: url(../images/registration/listmarker_green.svg);
+  background: url(../images/registration/listmarker_green.svg) no-repeat center
+    left;
+  padding-left: 40px;
+  background-position-x: 0;
+  background-size: 24px;
+  @include tablet {
+    font-size: 16px;
+    padding-left: 34px;
   }
-  &:not(:last-child) {
-    margin-bottom: 16px;
+  @include desktop {
+    font-size: 20px;
+    padding-left: 40px;
   }
 }
-.registration__btn {
-  padding-left: 0;
-  height: 72px;
-}
+
