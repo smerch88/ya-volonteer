@@ -1,6 +1,7 @@
 import './js/header/menu';
 import './js/header/header-hidden';
 import './js/header/dropdown-btn';
+import './js/footer/footer';
 
 const { height: pageHeaderHeight } = document
   .querySelector('.header')
