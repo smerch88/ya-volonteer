@@ -9,15 +9,12 @@
     font-size: 16px;
   }
 
-  & a,
-  svg {
-    transition: all $cubic-bezier 0.3s;
+  & a {
+    color: $secondary;
   }
 
-  & a:hover,
-  svg:hover path{
-    color: $accent_green;
-    stroke: $accent_green;
+  & svg {
+    stroke: currentColor;
   }
 
   &--first {
@@ -160,8 +157,4 @@
     margin-bottom: 0;
     margin-left: 24px;
   }
-}
-
-.svg--green path{
-  stroke: $accent_green;
 }
