@@ -1,15 +1,16 @@
 import { dropdownList, handleCloseDropdownMenu } from './dropdown-btn';
 import { menuBackdrop, handleCloseMenu } from './menu';
 
-let prevScrollPos = window.pageYOffset;
+let prevScrollPos = document.documentElement.scrollTop;
+const header = document.querySelector('.header');
 
-window.onscroll = function () {
-  const currentScrollPos = window.pageYOffset;
-
+function handleHiddenOnScroll() {
+  const currentScrollPos = document.documentElement.scrollTop;
+  console.log({ prevScrollPos, currentScrollPos });
   if (prevScrollPos > currentScrollPos) {
-    document.querySelector('.header').classList.remove('header--hidden');
+    header.classList.remove('header--hidden');
   } else {
-    document.querySelector('.header').classList.add('header--hidden');
+    header.classList.add('header--hidden');
 
     if (dropdownList.classList.contains('header__dropdown-list--open')) {
       handleCloseDropdownMenu();
@@ -21,4 +22,6 @@ window.onscroll = function () {
   }
 
   prevScrollPos = currentScrollPos;
-};
+}
+
+window.addEventListener('scroll', handleHiddenOnScroll);
