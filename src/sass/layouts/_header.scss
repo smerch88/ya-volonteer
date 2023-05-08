@@ -85,6 +85,10 @@
 }
 
 .header__nav {
+  @include mobile-only {
+    max-height: calc(100vh - 10px);
+    overflow-y: auto;
+  }
   &-container {
     @include mobile-only {
       width: 100%;
