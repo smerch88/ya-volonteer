@@ -71,6 +71,7 @@
 
   & svg {
     margin-left: auto;
+    min-width: 16px;
     stroke: currentColor;
     transition: transform 300ms $cubic-bezier;
   }
