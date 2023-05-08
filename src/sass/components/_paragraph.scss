@@ -12,9 +12,12 @@
     max-width: 680px;
     text-align: justify;
   }
-  @include desktop {
+  @include desktop-first {
     font-size: 24px;
-    max-width: 704px;
+    max-width: 586px;
     text-align: left;
+  }
+  @include desktop {
+    max-width: 704px;
   }
 }

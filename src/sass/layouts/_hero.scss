@@ -5,18 +5,22 @@
   @include tablet {
     margin-bottom: 88px;
   }
+  @include desktop-first {
+    background-image: url(../images/hero/bg-desktop-first.svg);
+    background-position: bottom right -134px;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+  }
   @include desktop {
     background-image: url(../images/hero/bg-desktop.svg);
     background-position: bottom right;
-    background-repeat: no-repeat;
-    margin-bottom: 0;
   }
 }
 
 .hero::before {
   content: '';
   display: none;
-  @include desktop {
+  @include desktop-first {
     position: absolute;
     display: block;
     background-image: url(../images/hero/cloud.svg);
@@ -24,6 +28,10 @@
     background-position: center;
     width: 130px;
     height: 25px;
+    top: 62px;
+    left: 33%;
+  }
+  @include desktop {
     top: 82px;
     left: 40%;
   }
@@ -32,7 +40,7 @@
 .hero::after {
   content: '';
   display: none;
-  @include desktop {
+  @include desktop-first {
     position: absolute;
     display: block;
     background-image: url(../images/hero/cloud-big.svg);
@@ -40,6 +48,10 @@
     background-position: left;
     width: 340px;
     height: 62px;
+    bottom: 50px;
+    left: -145px;
+  }
+  @include desktop {
     bottom: 66px;
     left: 0;
   }
@@ -59,9 +71,13 @@
     background-image: url(../images/hero/bg-tablet.svg);
     background-position: center bottom 104px;
   }
-  @include desktop {
+  @include desktop-first {
     background-image: none;
     justify-content: center;
+    height: 682px;
+  }
+  @include desktop {
+    height: 784px;
   }
 }
 
@@ -72,7 +88,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  @include desktop {
+  @include desktop-first {
     align-items: start;
   }
 }
@@ -82,8 +98,6 @@
   @include tablet {
     margin-bottom: 32px;
   }
-  @include desktop {
-  }
 }
 
 .hero__paragraph {
@@ -91,7 +105,7 @@
   @include tablet {
     margin-bottom: 485px;
   }
-  @include desktop {
+  @include desktop-first {
     margin-bottom: 56px;
   }
 }
@@ -115,6 +129,10 @@
     font-size: 20px;
     padding: 20px;
     max-width: 328px;
+  }
+  @include desktop-first {
+    max-width: 282px;
+    padding: 24px 6px;
   }
   @include desktop {
     max-width: 310px;
