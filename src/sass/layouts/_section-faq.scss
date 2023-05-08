@@ -1,3 +1,18 @@
+.faq__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 24px;
+
+  @include tablet {
+    row-gap: 48px;
+  }
+
+  @include desktop {
+    row-gap: 70px;
+  }
+}
+
 .faq__title {
   margin-bottom: 24px;
   text-align: center;
