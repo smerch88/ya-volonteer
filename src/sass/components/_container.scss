@@ -11,9 +11,12 @@
     padding-left: 40px;
     padding-right: 40px;
   }
-  @include desktop {
-    max-width: 1590px;
+  @include desktop-first {
+    max-width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  @include desktop {
+    max-width: 1590px;
   }
 }
