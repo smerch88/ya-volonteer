@@ -1,4 +1,4 @@
-.advantages {
+.information {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: $bg_secondary;
@@ -8,7 +8,7 @@
   }
 }
 
-.advantages__list {
+.information__list {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -32,7 +32,7 @@
       padding: 16px;
       flex-basis: calc((100% - 24px) / 2);
     }
-    @include desktop {
+    @include desktop-first {
       gap: 24px;
       padding: 24px;
       flex-basis: calc((100% - 72px) / 4);
@@ -44,19 +44,40 @@
   }
 
   & > li > h3 {
-    max-width: 200px;
+    @include desktop {
+      max-width: 200px;
+    }
+  }
+
+  & > li:first-child > h3 {
+    @include desktop-first {
+      max-width: 200px;
+    }
   }
 
   & > li:nth-child(3) > h3 {
     max-width: 300px;
   }
+
+   & > li:nth-child(3)  {
+    @include desktop-first{
+      padding: 24px 0;
+    }
+     @include desktop{
+      padding: 24px;
+    }
+  }
+
+  & a {
+    font-size: 16px;
+  }
 }
 
-.advantages__list--header {
+.information__list--header {
   position: relative;
 }
 
-.advantages__list--header::before {
+.information__list--header::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -69,8 +90,17 @@
   transition: all 0.25s $cubic-bezier 0.3s;
 }
 
-.advantages__list--header:hover::before {
+.information__list--header:hover::before {
   visibility: visible;
   left: 0;
   transform: scaleX(1);
+}
+
+.information__list--text {
+  @include desktop-first{
+    max-width: 258px;
+  }
+  @include desktop{
+    max-width: 100%;
+  }
 }

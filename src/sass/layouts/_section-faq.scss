@@ -8,7 +8,7 @@
     row-gap: 48px;
   }
 
-  @include desktop {
+  @include desktop-first {
     row-gap: 70px;
   }
 }
@@ -21,13 +21,14 @@
     margin-bottom: 48px;
   }
 
-  @include desktop {
+  @include desktop-first {
     margin-bottom: 70px;
   }
 }
 
 .faq__list {
   display: flex;
+  width: 100%;
   flex-direction: column;
   row-gap: 16px;
 
@@ -35,17 +36,18 @@
     font-size: 18px;
   }
 
-  @include desktop {
+  @include desktop-first {
     font-size: 20px;
   }
 }
 
 .faq__item {
   padding: 16px;
+  width: 100%;
   border: 2px solid $faq_border_color;
   border-radius: 20px;
 
-  @include desktop {
+  @include desktop-first {
     padding: 20px 30px;
   }
 }
@@ -61,22 +63,13 @@
   line-height: 1.5;
 
   cursor: pointer;
-  transition: all 300ms $cubic-bezier;
-
-  .faq__item.active & {
-    margin-bottom: 16px;
-  }
 
   @include tablet {
     font-size: 18px;
     column-gap: 34px;
-
-    .faq__item.active & {
-      margin-bottom: 20px;
-    }
   }
 
-  @include desktop {
+  @include desktop-first {
     font-size: 20px;
     transition: color 300ms $cubic-bezier;
     .faq__item.active & {
@@ -100,26 +93,47 @@
   }
 }
 
+.faq__text-wrapper {
+  border-color: $faq_border_color;
+  transition-property: padding-top, border, margin-top;
+  transition-duration: 300ms;
+  transition-timing-function: $cubic-bezier;
+
+  .faq__item.active & {
+    margin-top: 16px;
+    border-top: 1px solid $faq_border_color;
+    padding-top: 16px;
+
+    @include tablet {
+      margin-top: 20px;
+    }
+
+    @include desktop-first {
+      padding-top: 16px;
+    }
+  }
+}
+
 .faq__text {
-  height: 1px;
-  margin: 0;
+  max-height: 0;
+  margin-top: 0;
   font-size: 16px;
   line-height: 1.5;
   overflow: hidden;
 
-  transition: all 300ms $cubic-bezier;
+  transition-property: max-height;
+  transition-duration: 300ms;
+  transition-timing-function: $cubic-bezier;
 
   .faq__item.active & {
-    height: auto;
-    padding-top: 16px;
-    border-top: 1px solid $faq_border_color;
+    max-height: 100vh;
+  }
+
+  @include desktop-first {
+    max-width: 800px;
   }
 
   @include desktop {
     max-width: 768px;
-
-    .faq__item.active & {
-      padding-top: 16px;
-    }
   }
 }
