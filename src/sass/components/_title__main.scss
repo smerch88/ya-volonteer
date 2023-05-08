@@ -8,6 +8,10 @@
     font-size: 48px;
     max-width: 680px;
   }
+  @include desktop-first {
+    font-size: 64px;
+    max-width: 586px;
+  }
   @include desktop {
     font-size: 86px;
     max-width: 747px;
