@@ -8,7 +8,7 @@
     row-gap: 48px;
   }
 
-  @include desktop {
+  @include desktop-first {
     row-gap: 70px;
   }
 }
@@ -21,7 +21,7 @@
     margin-bottom: 48px;
   }
 
-  @include desktop {
+  @include desktop-first {
     margin-bottom: 70px;
   }
 }
@@ -36,7 +36,7 @@
     font-size: 18px;
   }
 
-  @include desktop {
+  @include desktop-first {
     font-size: 20px;
   }
 }
@@ -47,7 +47,7 @@
   border: 2px solid $faq_border_color;
   border-radius: 20px;
 
-  @include desktop {
+  @include desktop-first {
     padding: 20px 30px;
   }
 }
@@ -69,7 +69,7 @@
     column-gap: 34px;
   }
 
-  @include desktop {
+  @include desktop-first {
     font-size: 20px;
     transition: color 300ms $cubic-bezier;
     .faq__item.active & {
@@ -108,7 +108,7 @@
       margin-top: 20px;
     }
 
-    @include desktop {
+    @include desktop-first {
       padding-top: 16px;
     }
   }
@@ -127,6 +127,10 @@
 
   .faq__item.active & {
     max-height: 100vh;
+  }
+
+  @include desktop-first {
+    max-width: 800px;
   }
 
   @include desktop {
