@@ -6,7 +6,7 @@ const header = document.querySelector('.header');
 
 function handleHiddenOnScroll() {
   const currentScrollPos = document.documentElement.scrollTop;
-  console.log({ prevScrollPos, currentScrollPos });
+
   if (prevScrollPos > currentScrollPos) {
     header.classList.remove('header--hidden');
   } else {
@@ -21,7 +21,11 @@ function handleHiddenOnScroll() {
     }
   }
 
-  prevScrollPos = currentScrollPos;
+  if (currentScrollPos < 0) {
+    prevScrollPos = 10;
+  } else {
+    prevScrollPos = currentScrollPos;
+  }
 }
 
 window.addEventListener('scroll', handleHiddenOnScroll);

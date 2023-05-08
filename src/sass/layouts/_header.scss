@@ -11,11 +11,11 @@
   transition: opacity 300ms $cubic-bezier, transform 300ms $cubic-bezier;
 
   @include mobile-only {
-    padding: 20px 0;
+    padding: 12px 0;
   }
 
   @include tablet-only {
-    padding: 32px 0;
+    padding: 24px 0;
   }
 
   &--hidden {
@@ -37,22 +37,22 @@
 .menu-btn {
   display: flex;
   align-items: center;
-  padding: 0;
+  padding: 10px 0;
 
-  @include desktop {
+  @include desktop-first {
     display: none;
   }
 }
 
 .burger {
-  @include max-media(1559px) {
+  @include max-media(1199px) {
     width: 18px;
     height: 10px;
   }
 }
 
 .mobile-menu__backdrop {
-  @include max-media(1559px) {
+  @include max-media(1199px) {
     transform: translateY(-110%);
     transition: transform 300ms $cubic-bezier, opacity 300ms $cubic-bezier;
     &--open {
@@ -85,6 +85,10 @@
 }
 
 .header__nav {
+  @include mobile-only {
+    max-height: calc(100vh - 10px);
+    overflow-y: auto;
+  }
   &-container {
     @include mobile-only {
       width: 100%;
@@ -97,7 +101,7 @@
     }
   }
 
-  @include max-media(1559px) {
+  @include max-media(1199px) {
     position: relative;
     padding: 40px;
 
@@ -127,7 +131,7 @@
   stroke: currentColor;
   z-index: 11;
 
-  @include max-media(1559px) {
+  @include max-media(1199px) {
     position: absolute;
     top: 28px;
     right: 16px;
@@ -138,7 +142,7 @@
     right: 16px;
   }
 
-  @include desktop {
+  @include desktop-first {
     display: none;
   }
 }
@@ -147,13 +151,15 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  overflow-x: hidden;
-  transition: all 300ms $cubic-bezier;
-  @include desktop {
+
+  @include desktop-first {
     flex-direction: row;
     align-items: center;
+    column-gap: 32px;
+  }
+
+  @include desktop {
     column-gap: 60px;
-    overflow-x: visible;
   }
 }
 
@@ -165,63 +171,75 @@
   display: flex;
   column-gap: 10px;
   align-items: center;
+
   &__icon {
     stroke: currentColor;
     transition: transform 300ms $cubic-bezier;
   }
 
-  &.active &__icon,
-  &:hover &__icon {
+  &.active &__icon {
     transform: rotateX(180deg);
+  }
+
+  &:hover &__icon {
+    @include desktop-first {
+      transform: rotateX(180deg);
+    }
   }
 }
 
 .header__nav-link {
-  @include desktop {
+  @include desktop-first {
     padding: 48px 0;
   }
 }
 
 .header__dropdown-list {
-  position: absolute;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  padding-left: 16px;
   gap: 16px;
-  opacity: 0;
-  transition: transform 300ms $cubic-bezier, opacity 100ms $cubic-bezier;
 
-  @include max-media(1559px) {
-    transform: rotateX(90deg);
-    transform-origin: top;
+  @include max-media(1199px) {
+    padding-top: 0;
+    padding-left: 16;
+    max-width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: padding-top, max-height, max-width;
+    transition-duration: 300ms;
+    transition-timing-function: $cubic-bezier;
+
+    &--open {
+      padding-top: 20px;
+      padding-left: 16px;
+      max-width: 100vw;
+      max-height: 100vw;
+    }
   }
 
-  &--open {
-    position: relative;
-    opacity: 1;
-    transform: rotateX(0);
-  }
-
-  @include desktop {
+  @include desktop-first {
     position: absolute;
     bottom: 48px;
     left: 0;
     margin: 0;
     z-index: 10;
-    transform-origin: top;
-    transform: translateY(calc(100% + 18px)) rotateX(90deg);
     padding: 16px;
     width: max-content;
     border: 1px solid $accent_green;
     border-radius: 8px;
     background-color: $secondary;
+    transition: transform 300ms $cubic-bezier, opacity 100ms $cubic-bezier;
 
-    &--open,
-    .dropdown-btn:hover + &,
-    &:hover {
-      opacity: 1;
-      transform: translateY(calc(100% + 18px)) rotateX(0);
+    @include desktop-first {
+      transform-origin: top;
+      transform: translateY(calc(100% + 18px)) rotateX(90deg);
+
+      &--open,
+      .dropdown-btn:hover + &,
+      &:hover {
+        opacity: 1;
+        transform: translateY(calc(100% + 18px)) rotateX(0);
+      }
     }
   }
 }
