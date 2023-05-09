@@ -23,7 +23,7 @@
       padding-top: 56px;
       padding-bottom: 56px;
     }
-    @include desktop {
+    @include desktop-first {
       padding-top: 80px;
       padding-bottom: 80px;
     }
@@ -32,6 +32,14 @@
   &--second {
     background-color: $footer_dark;
     @include tablet {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+    @include desktop-first {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    @include desktop {
       padding-top: 24px;
       padding-bottom: 24px;
     }
@@ -48,6 +56,10 @@
     padding-right: 40px;
     padding-left: 40px;
     flex-direction: row;
+  }
+  @include desktop-first {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -75,8 +87,14 @@
       width: 211px;
       height: 135px;
     }
+    @include desktop-first {
+      width: 179px;
+      height: 101px;
+    }
+
     @include desktop {
       width: 240px;
+      height: 135px;
     }
   }
 }
@@ -91,10 +109,15 @@
     flex-wrap: wrap;
     margin-left: 24px;
   }
-  @include desktop {
-    gap: 101px;
+  @include desktop-first {
+    gap: 56px;
     flex-wrap: nowrap;
+    margin-left: 48px;
+  }
+
+  @include desktop {
     margin-left: 156px;
+    gap: 101px;
   }
 
   & ul {
@@ -107,8 +130,11 @@
     @include tablet {
       min-width: calc((100% - 80px) / 2);
     }
+    @include desktop-first {
+      min-width: 190px;
+    }
     @include desktop {
-      min-width: 160px;
+      min-width: 210px;
     }
   }
 

@@ -1,15 +1,17 @@
 .hero {
   position: relative;
   background-color: $secondary;
-  margin-bottom: 40px;
+  padding-top: 8px;
+  padding-bottom: 40px;
   @include tablet {
-    margin-bottom: 88px;
+    padding-bottom: 88px;
   }
   @include desktop-first {
     background-image: url(../images/hero/bg-desktop-first.svg);
     background-position: bottom right -134px;
     background-repeat: no-repeat;
-    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   @include desktop {
     background-image: url(../images/hero/bg-desktop.svg);

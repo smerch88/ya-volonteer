@@ -6,7 +6,7 @@
     padding-top: 88px;
     padding-bottom: 88px;
   }
-  @include desktop {
+  @include desktop-first {
     padding-top: 124px;
     padding-bottom: 124px;
   }
@@ -24,7 +24,7 @@
   @include tablet {
     margin-bottom: 48px;
   }
-  @include desktop {
+  @include desktop-first {
     margin-bottom: 70px;
   }
 }
@@ -36,15 +36,20 @@
     gap: 24px;
     margin-bottom: 48px;
   }
-  @include desktop {
+  @include desktop-first {
     align-items: center;
     gap: 48px;
+    margin-bottom: 70px;
   }
 }
 
 .statement__thumb {
   @include tablet {
     flex-basis: calc((100% - 24px) / 2);
+  }
+
+  @include desktop-first {
+    max-width: 588px;
   }
 
   @include desktop {
@@ -62,8 +67,12 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-  @include desktop {
+
+  @include desktop-first {
     font-size: 20px;
+    max-width: 564px;
+  }
+  @include desktop {
     max-width: 738px;
   }
 }
@@ -75,8 +84,9 @@
   @include tablet {
     gap: 48px;
   }
-  @include desktop {
+  @include desktop-first {
     flex-direction: row;
+    gap: 24px;
   }
 }
 
@@ -85,13 +95,17 @@
   @include tablet {
     padding: 24px;
   }
-  @include desktop {
+  @include desktop-first {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 40px;
+    padding: 24px;
     flex-basis: calc((100% - 24px) / 2);
     min-height: 665px;
+  }
+
+  @include desktop{
+    padding: 40px;
   }
 
   &:nth-child(odd) {
@@ -104,7 +118,7 @@
 
   & p:nth-child(1) {
     font-size: 16px;
-    @include desktop {
+    @include desktop-first {
       font-size: 20px;
     }
   }
@@ -129,7 +143,7 @@
     font-size: 28px;
     margin-bottom: 24px;
   }
-  @include desktop {
+  @include desktop-first {
     font-size: 36px;
   }
 }
