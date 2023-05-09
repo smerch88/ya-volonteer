@@ -5,7 +5,7 @@
     padding-top: 88px;
     padding-bottom: 88px;
   }
-  @include desktop {
+  @include desktop-first {
     padding-top: 124px;
     padding-bottom: 124px;
   }
@@ -24,7 +24,7 @@
     line-height: calc(44 / 36);
     margin-bottom: 40px;
   }
-  @include desktop {
+  @include desktop-first {
     font-size: 48px;
     line-height: calc(58 / 48);
     margin-bottom: 48px;
@@ -43,7 +43,7 @@
     line-height: 1.5;
     margin-bottom: 48px;
   }
-  @include desktop {
+  @include desktop-first {
     font-size: 24px;
     line-height: calc(36 / 24);
     max-height: 1163px;
@@ -51,20 +51,19 @@
   }
 }
 
-
 .registration__list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 24px;
-
   @include tablet {
     gap: 48px;
   }
-  @include desktop {
+  @include desktop-first {
     gap: 70px;
   }
 }
+
 .registration__list--item {
   display: flex;
   flex-direction: column;
@@ -81,18 +80,32 @@
       min-height: 596px;
     }
   }
-  @include desktop {
-    gap: 48px;
+
+  @include desktop-first {
+    flex-basis: calc((100% - 70px)/2);
+    gap: 36px;
     flex-direction: row;
-    min-height: 628px;
-    &:nth-child(odd) .registration__card-info {
-        padding-top: 62px;
-        padding-bottom: 62px;
-      } 
+     &:nth-child(odd) .registration__card-info {
+      padding-top: 47px;
+      padding-bottom: 47px;
+      min-height: 628px;
+    }
     &:nth-child(even) {
       flex-direction: row-reverse;
+      min-height: 628px;
+    }
   }
-}
+
+  @include desktop {
+    gap: 48px;
+    &:nth-child(odd) .registration__card-info {
+      padding-top: 62px;
+      padding-bottom: 62px;
+    }
+    &:nth-child(even) .registration__card-info {
+      padding-right: 83px;
+    }
+  }
 }
 
 .registration__card--image-cover {
@@ -102,6 +115,10 @@
 
   @include tablet {
     flex-basis: calc(50% - 12px);
+  }
+  @include desktop-first {
+    min-height: 628px;
+    flex-basis: calc(50% - 18px);
   }
   @include desktop {
     flex-basis: calc(50% - 24px);
@@ -123,7 +140,7 @@
   @include tablet {
     flex-basis: calc(50% - 12px);
   }
-  @include desktop {
+  @include desktop-first {
     flex-basis: calc(50% - 24px);
   }
 }
@@ -137,7 +154,7 @@
   @include tablet {
     font-size: 28px;
   }
-  @include desktop {
+  @include desktop-first {
     font-size: 36px;
     margin-bottom: 24px;
   }
@@ -152,7 +169,7 @@
   @include tablet {
     margin-bottom: 24px;
   }
-  @include desktop {
+  @include desktop-first {
     font-size: 20px;
     margin-bottom: 48px;
   }
@@ -168,7 +185,7 @@
     gap: 8px;
     margin-bottom: 24px;
   }
-  @include desktop {
+  @include desktop-first {
     gap: 16px;
     margin-bottom: 48px;
   }
@@ -184,13 +201,14 @@
   padding-left: 40px;
   background-position-x: 0;
   background-size: 24px;
+
   @include tablet {
     font-size: 16px;
     padding-left: 34px;
   }
-  @include desktop {
+
+  @include desktop-first {
     font-size: 20px;
     padding-left: 40px;
   }
 }
-
