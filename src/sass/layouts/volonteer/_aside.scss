@@ -3,12 +3,21 @@
   flex-direction: column;
 
   @include desktop-first {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
     row-gap: 124px;
     max-width: 282px;
+    height: fit-content;
 
     font-weight: 600;
     font-size: 20px;
     line-height: 1.5;
+    transition: top 300ms $cubic-bezier;
+
+    &--top {
+      top: 136px;
+    }
   }
 }
 

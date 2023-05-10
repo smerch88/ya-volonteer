@@ -2,6 +2,7 @@ import '../header/menu';
 import '../header/header-hidden';
 import '../header/dropdown-btn';
 import './volunteer.js';
+import './sticky-sidebar';
 
 const { height: pageHeaderHeight } = document
   .querySelector('.header')

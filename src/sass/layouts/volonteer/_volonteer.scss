@@ -1,5 +1,24 @@
 .volonteer__wrapper {
+  position: relative;
   display: flex;
+}
+
+.volonteer__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 8px;
+  width: 100%;
+  border: 3px solid $bg_secondary;
+
+  @include tablet {
+    padding: 48px 8px;
+  }
+
+  @include desktop {
+    padding: 64px 24px;
+  }
 }
 
 @import './aside';
