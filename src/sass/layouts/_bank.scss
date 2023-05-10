@@ -1,0 +1,137 @@
+.bank {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  & strong {
+    font-weight: 600;
+  }
+
+  & h3.special {
+    margin-top: 83px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+}
+
+.bank__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.bank__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  max-width: 272px;
+  margin-bottom: 24px;
+  &--special {
+    margin-top: 83px;
+    position: relative;
+  }
+}
+.bank__text {
+  margin-bottom: 16px;
+  &--special {
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+}
+
+.bank__list {
+  position: relative;
+  & li {
+    list-style-type: disc;
+    margin-left: 29px;
+  }
+
+  &--clean li {
+    list-style-type: none;
+    margin-left: 8px;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 8px;
+  }
+
+  &--clean li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.bank__title--wrapper {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.bank__title--third {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.bank__strong--wrapper {
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.bank__strong {
+  display: inline-block;
+}
+
+.bank-svg {
+  align-self: center;
+  height: 203px;
+  margin-bottom: 16px;
+  &--second{
+    height: 160px;
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+}
+
+.line::before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  top: -208px;
+  width: 99%;
+  min-width: 272px;
+  background-color: $bg_secondary;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.line::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  bottom: -40px;
+  width: 99%;
+  min-width: 272px;
+  background-color: $bg_secondary;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.line--wrapper{
+    position: relative;
+}
+
+.line--second::before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  top: 40px;
+  width: 99%;
+  min-width: 272px;
+  background-color: $bg_secondary;
+  left: 50%;
+  transform: translateX(-50%);
+}
