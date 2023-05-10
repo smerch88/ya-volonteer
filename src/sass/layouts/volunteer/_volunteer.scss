@@ -1,0 +1,31 @@
+.volunteer__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @include desktop-first {
+    flex-direction: row;
+  }
+}
+
+.volunteer__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 8px;
+  width: 100%;
+  // max-height: 100vh;
+  border: 3px solid $bg_secondary;
+  // overflow-y: auto;
+
+  @include tablet {
+    padding: 48px 8px;
+  }
+
+  @include desktop {
+    padding: 64px 24px;
+  }
+}
+
+@import './aside';
