@@ -93,6 +93,7 @@
 }
 
 .volunteer__burger {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,6 +102,26 @@
 
   @include tablet {
     padding: 14px 18px;
+  }
+}
+
+.volonteer__icon {
+  transition: opacity 300ms $cubic-bezier;
+
+  &--cross {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+
+  .volunteer__burger--open &--cross {
+    opacity: 1;
+  }
+
+  .volunteer__burger--open &--burger {
+    opacity: 0;
   }
 }
 
