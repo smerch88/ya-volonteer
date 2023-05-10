@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <script type="module" src="./js/volunteer/index.js"></script>
+  </head>
+  <body>
+    <!-- ❗️❗️❗️ Add partials like so for every page -->
+    <include src="./partials/header.html"></include>
+
+    <!-- Place for HERO -->
+    <section class="section">
+      <div class="container">
+        <div class="volonteer__wrapper">
+          <include
+            src="./partials/volonteer/volonteer-legal-entity/aside.html"
+          ></include>
+          <ul
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              border: 3px solid #c1efd9;
+            "
+          >
+            <li data-radio-list data-radio="types">
+              <p>Види волонтерських організацій</p>
+            </li>
+            <li hidden data-radio-list data-radio="register">
+              <p>Реєстрація</p>
+            </li>
+            <li hidden data-radio-list data-radio="status">
+              <p>Статус волонтерської організації</p>
+            </li>
+            <li hidden data-radio-list data-radio="bank-account">
+              <p>Відкриття банківсього рахунку</p>
+            </li>
+            <li hidden data-radio-list data-radio="nuances">
+              <p>Нюанси обліку та оподаткування</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <include src="./partials/footer.html"></include>
+  </body>
+</html>

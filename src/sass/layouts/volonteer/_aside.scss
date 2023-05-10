@@ -1,0 +1,69 @@
+.volonteer__aside {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop-first {
+    row-gap: 124px;
+    max-width: 282px;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+
+.volonteer__butoons-list {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop-first {
+    row-gap: 4px;
+  }
+}
+
+.volonteer__label {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+
+  cursor: pointer;
+
+  @include desktop-first {
+    position: relative;
+    min-height: 92px;
+
+    background-color: $bg_secondary;
+    border: 3px solid $bg_secondary;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 3px;
+      height: 100%;
+      background-color: transparent;
+    }
+    .volonteer__input:checked + & {
+      background-color: $secondary;
+      border-right: none;
+    }
+    .volonteer__input:checked + &::after {
+      right: -3px;
+      background-color: $secondary;
+    }
+  }
+}
+
+.volonteer__more-wrapper {
+  @include desktop-first {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    margin-right: 16px;
+
+    & .button {
+      max-width: 266px;
+    }
+  }
+}
