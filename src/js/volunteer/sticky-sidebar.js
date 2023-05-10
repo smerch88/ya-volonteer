@@ -1,16 +1,16 @@
 import { header } from '../header/header-hidden';
 
-const sidebar = document.querySelector('.volonteer__aside');
+const sidebar = document.querySelector('.volunteer__aside');
 
 function handleMoveSidebar() {
   const isHeaderContaines = header.classList.contains('header--hidden');
 
   if (isHeaderContaines) {
-    sidebar.classList.remove('volonteer__aside--top');
+    sidebar.classList.remove('volunteer__aside--top');
     return;
   }
   if (!isHeaderContaines) {
-    sidebar.classList.add('volonteer__aside--top');
+    sidebar.classList.add('volunteer__aside--top');
   }
 }
 
