@@ -4,6 +4,7 @@ import '../header/dropdown-btn';
 import './volunteer';
 import './volunteer-burger';
 import './sticky-sidebar';
+import '../bank/bank';
 
 const { height: pageHeaderHeight } = document
   .querySelector('.header')

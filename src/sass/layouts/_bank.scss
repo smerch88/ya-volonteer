@@ -24,13 +24,13 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 1.5;
-  max-width: 272px;
   margin-bottom: 24px;
   &--special {
     margin-top: 83px;
     position: relative;
   }
 }
+
 .bank__text {
   margin-bottom: 16px;
   &--special {
@@ -90,7 +90,7 @@
   align-self: center;
   height: 203px;
   margin-bottom: 16px;
-  &--second{
+  &--second {
     height: 160px;
     margin-top: 32px;
     margin-bottom: 0;
@@ -101,7 +101,7 @@
   content: '';
   position: absolute;
   height: 3px;
-  top: -208px;
+  top: -40px;
   width: 99%;
   min-width: 272px;
   background-color: $bg_secondary;
@@ -109,19 +109,19 @@
   transform: translateX(-50%);
 }
 
-.line::after {
+.line-second::before {
   content: '';
   position: absolute;
   height: 3px;
-  bottom: -40px;
+  top: -40px;
   width: 99%;
   min-width: 272px;
   background-color: $bg_secondary;
   left: 50%;
   transform: translateX(-50%);
 }
-.line--wrapper{
-    position: relative;
+.line--wrapper {
+  position: relative;
 }
 
 .line--second::before {
@@ -134,4 +134,15 @@
   background-color: $bg_secondary;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.bank__link {
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration-line: underline;
+  color: $accent_blue;
+  align-self: flex-start;
+  @include tablet {
+    display: none;
+  }
 }
