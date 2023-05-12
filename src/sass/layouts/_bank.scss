@@ -350,7 +350,12 @@
     justify-content: center;
   }
   & > div {
-    min-width: 320px;
+    @include tablet {
+      min-width: 320px;
+    }
+    @include desktop-first {
+      min-width: 423px;
+    }
   }
 
   & > div:first-child {
@@ -401,4 +406,8 @@
       height: 100%;
     }
   }
+}
+
+.bank__strong.light {
+  font-weight: 500;
 }

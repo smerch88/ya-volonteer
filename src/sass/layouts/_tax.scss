@@ -1,0 +1,25 @@
+.tax {
+  & h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+
+  & h3 {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+& p, & ul {
+    font-size: 16px;
+}
+}
+
+.tax__wrapper {
+    margin-top: 24px;
+    display: flex;
+    margin-bottom: 16px;
+    gap: 16px;
+    align-items: center;
+}
