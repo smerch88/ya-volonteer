@@ -3,23 +3,92 @@
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 40px;
+    @include desktop-first {
+      font-size: 32px;
+    }
+    @include desktop {
+      font-size: 36px;
+      margin-bottom: 64px;
+    }
   }
 
   & h3 {
     font-weight: 600;
     font-size: 16px;
-}
+    @include desktop-first {
+      font-size: 20px;
+    }
+    @include desktop {
+      font-size: 24px;
+    }
+  }
 
-
-& p, & ul {
+  & p,
+  & ul {
     font-size: 16px;
+    @include desktop {
+      font-size: 20px;
+    }
+  }
 }
+
+.tax__main--list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include tablet {
+    max-height: 1600px;
+    column-gap: 24px;
+    row-gap: 48px;
+  }
+  @include desktop-first {
+    max-height: 1600px;
+    row-gap: 64px;
+  }
+  & li {
+    @include tablet {
+      max-width: 320px;
+    }
+    @include desktop-first {
+      max-width: 423px;
+    }
+    @include desktop {
+      max-width: 558px;
+    }
+  }
 }
 
 .tax__wrapper {
-    margin-top: 24px;
-    display: flex;
-    margin-bottom: 16px;
-    gap: 16px;
-    align-items: center;
+  margin-top: 24px;
+  display: flex;
+  margin-bottom: 16px;
+  gap: 16px;
+  align-items: center;
+  @include tablet {
+    margin-top: 0;
+  }
+}
+
+.tax__list {
+  margin-top: 16px;
+  & li {
+    list-style-type: disc;
+    margin-left: 25px;
+    margin-bottom: 6px;
+  }
+}
+
+.tax__text {
+  margin-bottom: 16px;
+}
+
+.svg__wrapper > svg {
+  @include tablet {
+    width: 64px;
+    height: 64px;
+  }
+  @include desktop-first {
+    width: 80px;
+    height: 80px;
+  }
 }
