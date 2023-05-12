@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.register-steps {
+  flex-direction: column;
+  width: 100%;
+}
+
+.register-steps__title {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+
+  @include tablet {
+    margin-bottom: 48px;
+  }
+
+  @include desktop-first {
+    margin-bottom: 56px;
+    font-size: 32px;
+  }
+}
+
+.register-steps__img-cover {
+  align-self: center;
+  margin-bottom: 58px;
+  max-width: 272px;
+
+  @include tablet {
+    margin-bottom: 82px;
+    max-width: 445px;
+  }
+
+  @include desktop-first {
+    margin-bottom: 90px;
+    max-width: 558px;
+  }
+}
+
+.register-steps__list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 58px;
+
+  width: 100%;
+
+  @include tablet {
+    row-gap: 82px;
+    column-gap: 24px;
+  }
+
+  @include desktop-first {
+    row-gap: 90px;
+  }
+}
+
+.register-steps__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  padding: 48px 8px 16px;
+
+  width: 100%;
+
+  font-size: 16px;
+  line-height: 1.5;
+
+  border-width: 1px 0px 0px 1px;
+  border-style: solid;
+  border-color: #1d40b8;
+
+  @include tablet {
+    row-gap: 16px;
+    width: calc((100% - 24px) / 2);
+
+    &:nth-child(5) {
+      width: 100%;
+    }
+  }
+
+  @include desktop-first {
+    padding: 56px 16px 24px;
+  }
+}
+
+.register-steps__number-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.register-steps__step-number {
+  padding: 16px 20px;
+
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+
+  color: $secondary;
+  background: #10abe1;
+  border-radius: 20px;
+
+  @include tablet {
+    font-size: 32px;
+  }
+
+  @include desktop-first {
+    font-size: 36px;
+  }
+}
+
+.register-steps__step-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.register-steps__text {
+  & strong {
+    font-weight: 400;
+  }
+
+  &--red {
+    color: #ff2a2a;
+  }
+}
+
+.register-steps__step-link {
+  display: inline;
+  text-align: start;
+  text-decoration: underline;
+}
+
+.register-steps__lists-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.register-steps__list-wrapper {
+  display: inherit;
+  flex-direction: column;
+  row-gap: 16px;
+
+  @include tablet {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+.step-list {
+  padding-left: 24px;
+  list-style: disc;
+}

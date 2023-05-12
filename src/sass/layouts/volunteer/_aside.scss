@@ -1,6 +1,7 @@
 .volunteer__aside {
   position: -webkit-sticky;
   position: sticky;
+  z-index: 1;
   top: 0;
   display: flex;
   flex-direction: column;
