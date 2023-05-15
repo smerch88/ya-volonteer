@@ -1,27 +1,30 @@
-export const radioParent = document.querySelector('.volunteer__butoons-list');
+export const anchorParent = document.querySelector('.volunteer__butoons-list');
+export const anchorArray = [...document.querySelectorAll('.volunteer__anchor')];
 export const volunteerTitle = document.querySelector('.volunteer__title');
-export const radioList = [...document.querySelectorAll('[data-radio-list]')];
+export const anchorList = [...document.querySelectorAll('[data-anchor-list]')];
 
-export function handleRadioChange(e) {
-  const { height: asideHeight } = document
-    .querySelector('.volunteer__aside-mini')
-    .getBoundingClientRect();
+export function handleAnchorClick(e) {
+  if (!e.target.classList.contains('volunteer__anchor')) return;
 
-  radioParent.scrollIntoView({ behavior: 'smooth' });
-  radioParent.scrollBy(0, asideHeight);
+  anchorArray.map(el => {
+    if (el.classList.contains('active')) {
+      el.classList.remove('active');
+    }
+  });
 
-  radioList.map(el => {
-    if (el.dataset.radio === e.target.id) {
-      volunteerTitle.innerHTML = e.target.nextElementSibling.textContent;
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      el.removeAttribute('hidden');
+  e.target.classList.add('active');
+
+  anchorList.map(el => {
+    if (el.id === e.target.dataset.id) {
+      volunteerTitle.innerHTML = e.target.textContent;
+      el.classList.remove('visually-hidden');
     } else {
-      if (el.hasAttribute('hidden')) {
+      if (el.classList.contains('visually-hidden')) {
         return;
       }
-      el.setAttribute('hidden', true);
+      el.classList.add('visually-hidden');
     }
   });
 }
 
-radioParent.addEventListener('change', handleRadioChange);
+anchorParent.addEventListener('click', handleAnchorClick);
