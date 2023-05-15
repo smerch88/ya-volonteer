@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Гранти</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <script type="module" src="./js/volunteer/index.js"></script>
+  </head>
+  <body>
+    <!-- ❗️❗️❗️ Add partials like so for every page -->
+    <include src="./partials/header.html"></include>
+
+    <section class="section volunteer__section">
+      <div class="container">
+        <div id="grants" class="volunteer__wrapper">
+          <include src="./partials/grants/aside.html"></include>
+
+          <ul class="volunteer__list">
+            <li data-anchor-list id="types">
+              <p>Типи грантових заявок</p>
+            </li>
+            <li class="visually-hidden" data-anchor-list id="apply-grants">
+              <p>Хто може подавати заявку на гранти</p>
+            </li>
+            <li class="visually-hidden" data-anchor-list id="steps">
+              <p>Кроки подачі на грант</p>
+            </li>
+            <li class="visually-hidden" data-anchor-list id="aspects">
+              <p>Деякі аспекти подачі заявок</p>
+            </li>
+            <li class="visually-hidden" data-anchor-list id="resources">
+              <p>Інформаційні ресурси</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <include src="./partials/footer.html"></include>
+  </body>
+</html>
