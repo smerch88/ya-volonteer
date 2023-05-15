@@ -1,23 +1,24 @@
-import { radioList, volunteerTitle, radioParent } from './volunteer';
+import { anchorList, volunteerTitle, anchorArray } from './volunteer';
 
 const buttonBank = document.querySelector('[data-action="radio-bank-account"]');
-const radioBank = document.querySelector('[id="bank-account"]');
 
 function handleButtonBank() {
-  radioBank.setAttribute('checked', true);
-  const { height: asideHeight } = document
-    .querySelector('.volunteer__aside-mini')
-    .getBoundingClientRect();
+  anchorArray.map(el => {
+    if (el.classList.contains('active')) {
+      el.classList.remove('active');
+      return;
+    }
+    if (el.dataset.id === 'bank-account') {
+      el.classList.add('active');
+    }
+  });
 
-  radioParent.scrollIntoView({ behavior: 'smooth' });
-  radioParent.scrollBy(0, -asideHeight);
-
-  radioList.map(el => {
-    if (el.dataset.radio === 'bank-account') {
-      volunteerTitle.innerHTML = radioBank.nextElementSibling.textContent;
-      el.removeAttribute('hidden');
+  anchorList.map(el => {
+    if (el.id === 'bank-account') {
+      volunteerTitle.innerHTML = 'Відкриття банківсього рахунку';
+      el.classList.remove('visually-hidden');
     } else {
-      el.setAttribute('hidden', true);
+      el.classList.add('visually-hidden');
     }
   });
 }

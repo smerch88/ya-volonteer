@@ -20,28 +20,28 @@
     <include src="./partials/hero-organizations.html"></include>
     <section class="section volunteer__section">
       <div class="container">
-        <div class="volunteer__wrapper">
+        <div id="volonteer_organization" class="volunteer__wrapper">
           <include
             src="./partials/volunteer/volunteer-legal-entity/aside.html"
           ></include>
 
           <ul class="volunteer__list">
-            <li  data-radio-list data-radio="types">
-              <include  src="./partials/types/types.html"></include>
+            <li data-anchor-list id="types">
+              <include src="./partials/types/types.html"></include>
             </li>
-            <li hidden data-radio-list data-radio="register">
+            <li class="visually-hidden" data-anchor-list id="register">
               <!-- Change paragraph on your block with tag <include href=""></include> -->
               <include
                 src="./partials/volunteer/volunteer-legal-entity/register-steps.html"
               ></include>
             </li>
-            <li hidden data-radio-list data-radio="status">
+            <li class="visually-hidden" data-anchor-list id="status">
               <include src="./partials/status/status.html"></include>
             </li>
-            <li hidden data-radio-list data-radio="bank-account">
+            <li class="visually-hidden" data-anchor-list id="bank-account">
               <include src="./partials/bank.html"></include>
             </li>
-            <li hidden data-radio-list data-radio="nuances">
+            <li class="visually-hidden" data-anchor-list id="nuances">
               <include src="./partials/tax.html"></include>
             </li>
           </ul>
