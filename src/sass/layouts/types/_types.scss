@@ -3,11 +3,6 @@ section {
   flex-direction: row;
 }
 
-// .types {
-//     // outline: 1px solid tomato;
-//     // padding: 40px 8px;
-
-//   }
 .types__generalinfo {
   // outline: 1px solid green;
   padding-bottom: 40px;
@@ -22,12 +17,6 @@ section {
     // background-color: blueviolet;
     background-color: $bg_secondary;
   }
-  // @include tablet {
-  // padding: 48px 8px;
-  // }
-  // @include desktop-first {
-  //   padding: 64px 24px;
-  // }
 }
 .generalinfo__list {
   display: flex;
