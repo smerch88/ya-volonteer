@@ -1,0 +1,87 @@
+.resources {
+  font-size: 16px;
+  & h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+    margin-top: 40px;
+  }
+
+  & h2.special {
+    margin-top: 0;
+  }
+}
+
+.resources__link {
+  &.link {
+    text-decoration: underline;
+    font-weight: 600;
+  }
+  &--thin.link {
+    font-weight: 400;
+  }
+  &--more {
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration-line: underline;
+  color: $accent_blue;
+  align-self: flex-start;
+  @include tablet {
+    display: none;
+  }
+}
+}
+
+.resources__link > li {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.resources__link > li:last-child {
+  margin-bottom: 0;
+}
+
+.resources__text {
+  margin-bottom: 24px;
+}
+
+.resources__list--organizations > li {
+  margin-bottom: 24px;
+  & p {
+    margin-top: 16px;
+  }
+}
+
+.resources__list--organizations > li:last-child {
+  margin-bottom: 0;
+}
+
+.resources__wrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.resources__list--organizations > li {
+  margin-bottom: 24px;
+  & p {
+    margin-top: 16px;
+  }
+}
+
+.resources__list--partners > li {
+  margin-bottom: 16px;
+  & p {
+    margin-top: 16px;
+  }
+}
+
+.resources__list--partners > li:last-child {
+  margin-bottom: 0;
+}
+
+.resources__thumb {
+  margin-top: 24px;
+}
+
+
