@@ -7,7 +7,11 @@ body {
 }
 
 .section {
-  padding: 100px 0;
+  padding: 40px 0;
+
+  @include tablet {
+    padding: 80px 0;
+  }
 
   &--light-green {
     background-color: $bg_secondary;
@@ -19,7 +23,6 @@ button {
   background-color: inherit;
   border: none;
 }
-
 
 .section__zero {
   padding-top: 0;
