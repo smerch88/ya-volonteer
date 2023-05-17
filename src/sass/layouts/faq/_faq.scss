@@ -1,0 +1,60 @@
+.faq__content-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+
+  max-width: 1000px;
+
+  &--disk {
+    padding-left: 20px;
+    list-style: disc;
+  }
+}
+
+.register-steps__step-link--blue {
+  color: #1d40b8;
+}
+
+.table {
+  max-width: 1000px;
+  border-collapse: collapse;
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+
+  & th:nth-child(n + 2) {
+    width: 37.5%;
+  }
+
+  & th {
+    font-weight: 600;
+    font-size: 14px;
+    color: $secondary;
+    background-color: #1b7fc4;
+  }
+
+  & th,
+  & td {
+    padding: 4px;
+    border: 2px solid #97becc;
+  }
+
+  @include tablet {
+    font-size: 16px;
+
+    & th {
+      font-size: 20px;
+    }
+
+    & th,
+    & td {
+      padding: 16px;
+      border-width: 4px;
+    }
+  }
+
+  @include desktop-first {
+    padding: 24px;
+  }
+}

@@ -26,5 +26,6 @@ export function handleAnchorClick(e) {
     }
   });
 }
-
-anchorParent.addEventListener('click', handleAnchorClick);
+if (Boolean(anchorParent)) {
+  anchorParent.addEventListener('click', handleAnchorClick);
+}

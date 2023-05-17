@@ -16,7 +16,11 @@ function handleMoveSidebar() {
 
 const observer = new MutationObserver(function (mutations) {
   mutations.forEach(function (mutation) {
-    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+    if (
+      mutation.type === 'attributes' &&
+      mutation.attributeName === 'class' &&
+      Boolean(sidebar)
+    ) {
       handleMoveSidebar();
     }
   });

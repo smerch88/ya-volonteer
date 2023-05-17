@@ -33,5 +33,6 @@ function handleVolonteerAnyToggle(e) {
   volunteerBurger.classList.remove('volunteer__burger--open');
   window.removeEventListener('click', handleVolonteerAnyToggle);
 }
-
-volunteerBurger.addEventListener('click', handleVolonteerBurgerToggle);
+if (Boolean(volunteerBurger)) {
+  volunteerBurger.addEventListener('click', handleVolonteerBurgerToggle);
+}
