@@ -1,6 +1,9 @@
 .important-aspects {
   font-weight: 400;
   font-size: 18px;
+  @include tablet {
+    font-size: 16px;
+  }
 }
 
 .important-aspects__container {
@@ -11,6 +14,17 @@
   }
   & p.special {
     margin-bottom: 24px;
+    @include tablet {
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+    &--tablet {
+      font-size: 16px;
+      margin-bottom: 24px;
+      @include desktop-first {
+        max-width: 600px;
+      }
+    }
   }
   & p.mini {
     margin-bottom: 16px;
@@ -21,6 +35,24 @@
 
   & p.top {
     margin-top: 24px;
+    @include tablet {
+      margin-top: 0;
+      max-width: 320px;
+    }
+    @include desktop-first {
+      margin-top: 0;
+      max-width: 423px;
+    }
+  }
+
+  & h3 {
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include desktop-first {
+      font-size: 20px;
+    }
   }
 }
 
@@ -28,10 +60,37 @@
   font-weight: 600;
   font-size: 24px;
   margin-bottom: 32px;
+  @include desktop-first {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+}
+
+.important-aspects__wrapper {
+  @include tablet {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+}
+
+.wrapper {
+  @include tablet {
+    max-width: 320px;
+  }
+  @include desktop-first {
+    max-width: 423px;
+  }
 }
 
 .important-aspects__thumb {
   align-self: center;
+  &--special {
+    @include tablet {
+      margin-top: 40px;
+    }
+  }
 }
 
 .important-aspects__svg--thumb {
@@ -40,14 +99,133 @@
   display: flex;
   gap: 16px;
   align-items: center;
+  @include tablet {
+    margin-top: 0;
+  }
+  @include desktop-first {
+    margin-bottom: 24px;
+  }
 }
 
 .important-aspects__list > li {
   display: flex;
   gap: 16px;
   margin-bottom: 8px;
+  @include desktop-first {
+    margin-bottom: 3px;
+  }
 }
 
 .important-aspects__list > li:last-child {
   margin-bottom: 0;
+}
+
+.important-aspects__link {
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration-line: underline;
+  color: $accent_blue;
+  align-self: flex-start;
+  @include tablet {
+    display: none;
+  }
+}
+
+.important-aspects__tablet--container {
+  @include tablet {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 320px);
+    grid-column-gap: 24px;
+    grid-row-gap: 40px;
+    grid-auto-rows: minmax(244px, auto);
+    grid-template-areas:
+      'item1 item3'
+      'item1 item4'
+      'item2 item5'
+      'item2 item6';
+  }
+
+  @include desktop-first {
+    grid-template-columns: repeat(2, 423px);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      'item1 item3'
+      'item1 item4'
+      'item2 item4'
+      'item2 item5'
+      'item2 item6';
+  }
+}
+
+.item1 {
+  grid-area: item1;
+  @include desktop-first {
+    max-height: 400px;
+  }
+}
+
+.item2 {
+  grid-area: item2;
+}
+
+.item3 {
+  grid-area: item3;
+}
+
+.item4 {
+  grid-area: item4;
+  @include desktop-first {
+    max-height: 200px;
+  }
+}
+
+.item5 {
+  grid-area: item5;
+  @include desktop-first {
+    margin-top: -75px;
+  }
+}
+
+.item6 {
+  grid-area: item6;
+}
+
+.svg > svg {
+  @include tablet {
+    width: 64px;
+    height: 64px;
+  }
+  @include desktop-first {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.important-aspects__list.list__special {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 800px;
+  }
+   @include desktop-first {
+    max-height: 700px;
+  }
+  & > li {
+    @include tablet {
+      max-width: 320px;
+    }
+    @include desktop-first {
+      max-width: 423px;
+    }
+  }
+}
+
+.important-aspects__wrapper--bottom {
+  @include tablet {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+  }
 }

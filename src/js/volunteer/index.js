@@ -6,6 +6,7 @@ import './volunteer-burger';
 import './button-to-bank';
 import './sticky-sidebar';
 import '../bank/bank';
+import '../important-aspects/important-aspects';
 
 const { height: pageHeaderHeight } = document
   .querySelector('.header')

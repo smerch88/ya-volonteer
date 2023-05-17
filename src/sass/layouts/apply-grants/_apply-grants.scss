@@ -1,0 +1,145 @@
+// .apply {
+// }
+.apply__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.apply__title {
+  font-weight: 600;
+  font-size: 24px;
+  color: $primary;
+  margin-bottom: 32px;
+
+  @include desktop-first {
+    font-size: 32px;
+  }
+}
+
+.apply__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 600px;
+  color: $primary;
+  margin-bottom: 24px;
+}
+
+.apply__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.apply-box__list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        list-style-type: none;
+        @include tablet {
+            flex-basis: calc(50% - 12px);
+          }
+        @include desktop-first {
+            gap: 16px;
+        }
+}
+
+.apply-box__list--item-with-icon {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $primary;
+  background: url(../images/registration/listmarker_green.svg) no-repeat center
+    left;
+  padding-left: 40px;
+  background-position-x: 0;
+  background-size: 24px;
+&.second-icon{
+    background: url(../images/apply-grants/icon-warning.svg) no-repeat center
+    left;
+}
+  @include tablet {
+    padding-left: 34px;
+  }
+
+  @include desktop-first {
+    padding-left: 40px;
+  }
+}
+
+.apply-box__image-thumb {
+    display: flex;
+    width: 100%;
+    min-height: 240px;
+  
+    @include tablet {
+      flex-basis: calc(50% - 12px);
+    }
+}
+  
+  .apply-box__card--image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+.apply__subtitle--box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    &__svg {
+      background-color: $icon_bgcolor;
+      border-radius: 50%;
+      & svg {  
+        width: 48px;
+        height: 40px;
+        @include tablet {
+            width: 64px;
+            height: 56px;
+          }
+        @include desktop-first {
+          width: 80px;
+          height: 72px;
+        }
+      }
+    }
+}
+
+.apply__subtitle {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    @include tablet {
+      font-size: 20px;
+    }
+}
+
+.box-reverse {
+  @include tablet {
+    flex-direction: row-reverse;
+  }
+}
+.apply-box__list--withtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @include tablet {
+        flex-basis: calc(50% - 12px);
+      }
+}
+.apply-box__list--title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    @include tablet {
+      font-size: 18px;
+    }
+}

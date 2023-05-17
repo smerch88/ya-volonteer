@@ -58,8 +58,8 @@
     flex-direction: row;
   }
   @include desktop-first {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
@@ -70,33 +70,22 @@
     align-self: flex-start;
     margin-bottom: 0;
   }
-
+  
   & a {
-    background-color: gray;
-    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.15;
-    width: 63px;
-    height: 33px;
-
-    @include tablet {
-      width: 211px;
-      height: 135px;
-    }
-    @include desktop-first {
-      width: 179px;
-      height: 101px;
-    }
-
-    @include desktop {
-      width: 240px;
-      height: 135px;
-    }
+    width: 88px;
+    height: 70px;
   }
+}
+
+.footer__logo path {
+  transition: stroke 300ms $cubic-bezier;gi
+}
+
+.footer__logo:hover path {
+  stroke: $accent_green;
 }
 
 .footer__wrapper {
