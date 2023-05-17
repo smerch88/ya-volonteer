@@ -10,6 +10,7 @@ import './js/volunteer/volunteer-burger';
 import './js/volunteer/button-to-bank';
 import './js/volunteer/sticky-sidebar';
 import './js/important-aspects/important-aspects';
+import './js/section-faq/faq-search';
 
 const { height: pageHeaderHeight } = document
   .querySelector('.header')
