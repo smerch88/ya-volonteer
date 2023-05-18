@@ -45,15 +45,9 @@
     max-height: 1600px;
     row-gap: 64px;
   }
-  & li {
+  & > li {
     @include tablet {
-      max-width: 320px;
-    }
-    @include desktop-first {
-      max-width: 423px;
-    }
-    @include desktop {
-      max-width: 558px;
+      max-width: calc((100% - 24px) / 2);
     }
   }
 }

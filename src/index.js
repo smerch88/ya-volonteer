@@ -4,6 +4,7 @@ import './js/header/dropdown-btn';
 
 import './js/section-faq/section-faq';
 import './js//bank/bank';
+import './js/resorces/resources';
 
 import './js/volunteer/volunteer';
 import './js/volunteer/volunteer-burger';
