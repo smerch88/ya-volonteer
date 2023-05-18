@@ -10,9 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
       integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./js/volunteer/index.js"></script>
   </head>
@@ -35,7 +39,9 @@
               <p>Кроки реєстрації</p>
             </li>
             <li class="visually-hidden" data-anchor-list id="docs-list">
-              <p>Перелік документів</p>
+              <include
+                src="./partials/volunteer/volunteer-individual/documents.html"
+              ></include>
             </li>
 
             <li class="visually-hidden" data-anchor-list id="nuances">

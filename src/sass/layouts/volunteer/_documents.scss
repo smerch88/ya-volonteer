@@ -1,0 +1,131 @@
+.documents {
+  flex-direction: column;
+  padding: 0 8px;
+
+  font-size: 16px;
+  line-height: 1.5;
+
+  @include desktop-first {
+    padding: 0 24px;
+    font-size: 18px;
+  }
+}
+
+.documents__title {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+
+  @include tablet {
+    font-size: 24px;
+  }
+  @include desktop-first {
+    margin-bottom: 24px;
+  }
+}
+
+.documents__list {
+  position: relative;
+  display: inherit;
+  flex-direction: column;
+  row-gap: 4px;
+  padding-left: 20px;
+  list-style-type: decimal;
+
+  @include tablet {
+    padding-bottom: 48px;
+  }
+
+  @include tablet {
+    padding-bottom: 64px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: $bg_secondary;
+  }
+}
+
+.documents__strong {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  margin: 4px 0;
+
+  min-width: calc(100% + 20px);
+  transform: translateX(-20px);
+
+  @include tablet {
+    row-gap: 24px;
+    margin: 24px 0;
+  }
+}
+
+.documents__statement-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 16px;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: row-reverse;
+    margin-top: 48px;
+  }
+
+  @include desktop-first {
+    gap: 24px;
+    margin-top: 64px;
+  }
+
+  @include desktop {
+    justify-content: center;
+  }
+}
+
+.documents__statement-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include tablet {
+    max-width: 410px;
+  }
+
+  @include desktop-first {
+    gap: 24px;
+  }
+}
+
+.register-steps__step-link--blue {
+  color: $accent_blue;
+}
+
+.documents__statement-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  object-fit: contain;
+
+  & img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @include tablet {
+    max-width: 50%;
+  }
+
+  @include tablet {
+    max-width: 396px;
+  }
+}
