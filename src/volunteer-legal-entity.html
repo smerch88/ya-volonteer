@@ -24,37 +24,39 @@
     <!-- ❗️❗️❗️ Add partials like so for every page -->
     <include src="./partials/header.html"></include>
 
-    <include src="./partials/hero-organizations.html"></include>
-    <section class="section volunteer__section section__zero">
-      <div id="volonteer_organization" class="container">
-        <div class="volunteer__wrapper">
-          <include
-            src="./partials/volunteer/volunteer-legal-entity/aside.html"
-          ></include>
+    <main id="volunteer-legal-entity">
+      <include src="./partials/hero-organizations.html"></include>
+      <section class="section volunteer__section section__zero">
+        <div id="volonteer_organization" class="container">
+          <div class="volunteer__wrapper">
+            <include
+              src="./partials/volunteer/volunteer-legal-entity/aside.html"
+            ></include>
 
-          <ul class="volunteer__list">
-            <li data-anchor-list id="types">
-              <include src="./partials/types/types.html"></include>
-            </li>
-            <li class="visually-hidden" data-anchor-list id="register">
-              <!-- Change paragraph on your block with tag <include href=""></include> -->
-              <include
-                src="./partials/volunteer/volunteer-legal-entity/register-steps.html"
-              ></include>
-            </li>
-            <li class="visually-hidden" data-anchor-list id="status">
-              <include src="./partials/status/status.html"></include>
-            </li>
-            <li class="visually-hidden" data-anchor-list id="bank-account">
-              <include src="./partials/bank.html"></include>
-            </li>
-            <li class="visually-hidden" data-anchor-list id="nuances">
-              <include src="./partials/tax.html"></include>
-            </li>
-          </ul>
+            <ul class="volunteer__list">
+              <li data-anchor-list id="types">
+                <include src="./partials/types/types.html"></include>
+              </li>
+              <li class="visually-hidden" data-anchor-list id="register">
+                <!-- Change paragraph on your block with tag <include href=""></include> -->
+                <include
+                  src="./partials/volunteer/volunteer-legal-entity/register-steps.html"
+                ></include>
+              </li>
+              <li class="visually-hidden" data-anchor-list id="status">
+                <include src="./partials/status/status.html"></include>
+              </li>
+              <li class="visually-hidden" data-anchor-list id="bank-account">
+                <include src="./partials/bank.html"></include>
+              </li>
+              <li class="visually-hidden" data-anchor-list id="nuances">
+                <include src="./partials/tax.html"></include>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
     <include src="./partials/footer.html"></include>
   </body>
 </html>
