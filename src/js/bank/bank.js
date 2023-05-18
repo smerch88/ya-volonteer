@@ -33,5 +33,5 @@ function showMore3() {
     if (list3.children[i].classList.contains('visually-hidden-mobile')) {
       list3.children[i].classList.remove('visually-hidden-mobile');
     }
-    }
+  }
 }

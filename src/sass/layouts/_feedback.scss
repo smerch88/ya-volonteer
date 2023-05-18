@@ -10,7 +10,6 @@
     padding-top: 124px;
     padding-bottom: 124px;
   }
-
 }
 .feedback__wrapper {
   display: flex;
@@ -112,7 +111,7 @@
   &--error {
     border-color: $input_border_error;
   }
-  &--enabled{
+  &--enabled {
     border-color: $card_bg_blue;
   }
 
@@ -133,7 +132,7 @@
   overflow: auto;
   &::-webkit-scrollbar:vertical {
     height: 80px;
-    }
+  }
 }
 .feedback__btn a {
   @include tablet {

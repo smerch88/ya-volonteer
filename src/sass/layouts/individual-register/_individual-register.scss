@@ -86,11 +86,11 @@
   flex-direction: column;
   gap: 16px;
   list-style-type: none;
-&.sublist{
+  &.sublist {
     list-style-type: disc;
     padding-left: 28px;
     margin-top: 16px;
-}
+  }
 }
 .individual-types-box__list--item-custom {
   font-weight: 400;
