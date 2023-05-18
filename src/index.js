@@ -1,6 +1,7 @@
 import './js/header/menu';
 import './js/header/header-hidden';
 import './js/header/dropdown-btn';
+import './js/header/active-page';
 
 import './js/section-faq/section-faq';
 import './js//bank/bank';

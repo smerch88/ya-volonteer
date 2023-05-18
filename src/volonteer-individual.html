@@ -24,13 +24,13 @@
     <!-- ❗️❗️❗️ Add partials like so for every page -->
     <include src="./partials/header.html"></include>
 
-    <section class="section volunteer__section section__zero">
-      <div class="container">
-        <div id="volonteer_organization" class="volunteer__wrapper">
-          <include
-            src="./partials/volunteer/volunteer-individual/aside.html"
-          ></include>
-
+    <main id="volunteer-individual">
+      <section class="section volunteer__section section__zero">
+        <div class="container">
+          <div id="volonteer_organization" class="volunteer__wrapper">
+            <include
+              src="./partials/volunteer/volunteer-individual/aside.html"
+            ></include>
           <ul class="volunteer__list">
             <li data-anchor-list id="advantages">
               <p>Переваги реєстрації</p>
@@ -43,14 +43,14 @@
                 src="./partials/volunteer/volunteer-individual/documents.html"
               ></include>
             </li>
-
-            <li class="visually-hidden" data-anchor-list id="nuances">
-              <p>Нюанси обліку та оподаткування</p>
-            </li>
-          </ul>
+              <li class="visually-hidden" data-anchor-list id="nuances">
+                <p>Нюанси обліку та оподаткування</p>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
     <include src="./partials/footer.html"></include>
   </body>
 </html>

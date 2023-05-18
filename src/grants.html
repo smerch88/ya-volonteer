@@ -23,35 +23,39 @@
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
     <include src="./partials/header.html"></include>
-    <include src="./partials/hero-grant.html"></include>
+    <main id="grants">
+      <include src="./partials/hero-grant.html"></include>
 
-    <section class="section volunteer__section section__zero">
-      <div class="container">
-        <div id="grants" class="volunteer__wrapper">
-          <include src="./partials/grants/aside.html"></include>
+      <section class="section volunteer__section section__zero">
+        <div class="container">
+          <div id="grants" class="volunteer__wrapper">
+            <include src="./partials/grants/aside.html"></include>
 
-          <ul class="volunteer__list">
-            <li data-anchor-list id="types">
-              <include src="./partials/grants-types/grants-types.html"></include>
-            </li>
-            <li class="visually-hidden" data-anchor-list id="apply-grants">
-              <include
-                src="./partials/apply-grants/apply-grants.html"
-              ></include>
-            </li>
-            <li class="visually-hidden" data-anchor-list id="steps">
-              <include src="./partials/steps.html"></include>
-            </li>
-            <li class="visually-hidden" data-anchor-list id="aspects">
-              <include src="./partials/important-aspects.html"></include>
-            </li>
-            <li class="visually-hidden" data-anchor-list id="resources">
-              <include src="./partials/resources.html"></include>
-            </li>
-          </ul>
+            <ul class="volunteer__list">
+              <li data-anchor-list id="types">
+                <include
+                  src="./partials/grants-types/grants-types.html"
+                ></include>
+              </li>
+              <li class="visually-hidden" data-anchor-list id="apply-grants">
+                <include
+                  src="./partials/apply-grants/apply-grants.html"
+                ></include>
+              </li>
+              <li class="visually-hidden" data-anchor-list id="steps">
+                <include src="./partials/steps.html"></include>
+              </li>
+              <li class="visually-hidden" data-anchor-list id="aspects">
+                <include src="./partials/important-aspects.html"></include>
+              </li>
+              <li class="visually-hidden" data-anchor-list id="resources">
+                <include src="./partials/resources.html"></include>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
     <include src="./partials/footer.html"></include>
   </body>
 </html>
