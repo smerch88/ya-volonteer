@@ -2,10 +2,12 @@ const searchInput = document.querySelector('.page-faq__search-input');
 const clearButton = document.querySelector('.page-faq__clear-btn');
 const questionList = [...document.querySelectorAll('[data-faq="item"]')];
 const searchError = document.querySelector('.page-faq__search-error');
+const searchForm = document.querySelector('.page-faq__form');
 
 function handleInput(e) {
   searchError.classList.add('visually-hidden');
   const query = e.target.value.trim().toLowerCase();
+
   if (!query) {
     questionList.map(el => {
       if (!el.classList.contains('visually-hidden')) return;
@@ -14,7 +16,17 @@ function handleInput(e) {
   }
 
   questionList.map(el => {
-    if (el.textContent.toLowerCase().includes(query)) return;
+    const questionTitle = el
+      .querySelector('.faq__subtitle')
+      .textContent.toLowerCase();
+
+    if (questionTitle.includes(query)) {
+      if (el.classList.contains('visually-hidden')) {
+        el.classList.remove('visually-hidden');
+      }
+
+      return;
+    }
 
     if (el.classList.contains('visually-hidden')) return;
     el.classList.add('visually-hidden');
@@ -58,4 +70,10 @@ if (Boolean(searchInput)) {
 
 if (Boolean(clearButton)) {
   clearButton.addEventListener('click', handleClearClick);
+}
+
+if (Boolean(searchForm)) {
+  searchForm.addEventListener('submit', e => {
+    e.preventDefault();
+  });
 }
