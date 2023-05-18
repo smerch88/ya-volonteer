@@ -1,0 +1,87 @@
+.registration-volunteer {
+  font-size: 16px;
+  @include desktop-first {
+    font-size: 18px;
+  }
+  & h2 {
+    font-size: 16px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    @include desktop-first {
+      font-size: 18px;
+      margin-top: 36px;
+    }
+  }
+
+  & p {
+    margin-bottom: 16px;
+  }
+
+  & p.special {
+    margin-bottom: 0;
+  }
+}
+
+.inline {
+  display: inline;
+}
+
+.line::before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  top: -42px;
+  width: 99%;
+  min-width: 272px;
+  background-color: $bg_secondary;
+  left: 50%;
+  transform: translateX(-50%);
+  @include desktop-first {
+    top: -70px;
+  }
+}
+
+.important-aspects__thumb {
+  margin-bottom: 16px;
+  @include tablet {
+    margin-bottom: 0;
+  }
+  &--first {
+    margin-bottom: 83px;
+    @include tablet {
+      width: 664px;
+      height: 534px;
+    }
+
+    @include desktop-first {
+      width: 870px;
+      height: 702px;
+      margin-top: 36px;
+      margin-bottom: 181px;
+    }
+  }
+}
+
+.register-volunteer__line {
+  width: 100%;
+  height: 1px;
+  position: relative;
+}
+
+.register-volunteer__wrapper {
+  @include tablet {
+    display: flex;
+    gap: 24px;
+    & div {
+      max-width: calc((100% - 24px) / 2);
+    }
+  }
+  & h2 {
+    @include tablet {
+      font-size: 20px;
+    }
+    @include desktop-first {
+      font-size: 24px;
+    }
+  }
+}
