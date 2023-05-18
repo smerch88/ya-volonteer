@@ -5,7 +5,8 @@
   "homepage": "https://github.com/smerch88/ya-volonteer",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /ya-volonteer/"
+    "build": "parcel build src/*.html --public-url /ya-volonteer/",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,8 @@
     "@parcel/transformer-sass": "^2.6.0",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^1.7.4"
+    "posthtml-include": "^1.7.4",
+    "prettier": "^2.8.8"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }

@@ -59,11 +59,11 @@
     max-width: 300px;
   }
 
-   & > li:nth-child(3)  {
-    @include desktop-first{
+  & > li:nth-child(3) {
+    @include desktop-first {
       padding: 24px 0;
     }
-     @include desktop{
+    @include desktop {
       padding: 24px;
     }
   }
@@ -97,10 +97,10 @@
 }
 
 .information__list--text {
-  @include desktop-first{
+  @include desktop-first {
     max-width: 258px;
   }
-  @include desktop{
+  @include desktop {
     max-width: 100%;
   }
 }

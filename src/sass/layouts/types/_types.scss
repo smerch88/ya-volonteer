@@ -182,11 +182,10 @@ section {
   gap: 16px;
   margin-bottom: 16px;
   &-svg {
- 
     justify-content: center;
     background-color: $icon_bgcolor;
     border-radius: 50%;
-    & svg { 
+    & svg {
       width: 48px;
       height: 48px;
       @include desktop-first {

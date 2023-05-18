@@ -1,6 +1,8 @@
 const faqList = document.querySelector('[data-faq="list"]');
 
 function handleFaqItemClick(e) {
+  if (!Boolean(e.target.closest('.faq__subtitle'))) return;
+
   const parentElement = e.target.closest('[data-faq="item"]');
   if (!Boolean(parentElement)) return;
 

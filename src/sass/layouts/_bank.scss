@@ -339,10 +339,9 @@
     align-items: center;
     justify-content: center;
   }
-   @include desktop {
-    justify-content:space-between;
+  @include desktop {
+    justify-content: space-between;
   }
-
 }
 .bank_svg-foot {
   display: flex;
@@ -394,7 +393,7 @@
     max-width: 423px;
   }
 
-  &--bottom{
+  &--bottom {
     margin-top: 24px;
     margin-bottom: 0;
   }
@@ -407,7 +406,7 @@
   @include desktop-first {
     max-width: 423px;
   }
-    @include desktop {
+  @include desktop {
     max-width: 558px;
   }
 }

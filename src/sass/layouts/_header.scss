@@ -34,6 +34,16 @@
   }
 }
 
+.logo {
+  &__hand {
+    transition: stroke 300ms $cubic-bezier;
+  }
+
+  &:hover &__hand {
+    stroke: $accent_green;
+  }
+}
+
 .menu-btn {
   display: flex;
   align-items: center;
@@ -198,6 +208,13 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 1.2;
+
+    .header__nav-item.active & {
+      position: relative;
+      font-weight: 600;
+      letter-spacing: -0.01765em;
+      color: $accent_green;
+    }
   }
 }
 

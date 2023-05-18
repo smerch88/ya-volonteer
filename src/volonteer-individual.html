@@ -25,33 +25,35 @@
     <include src="./partials/header.html"></include>
     <include src="./partials/hero-volunteer.html"></include>
 
-    <section class="section volunteer__section section__zero">
-      <div class="container">
-        <div id="volonteer_organization" class="volunteer__wrapper">
-          <include
-            src="./partials/volunteer/volunteer-individual/aside.html"
-          ></include>
-
-          <ul class="volunteer__list">
-            <li data-anchor-list id="advantages">
-              <p>Переваги реєстрації</p>
-            </li>
-            <li class="visually-hidden" data-anchor-list id="register">
-              <p>Кроки реєстрації</p>
-            </li>
-            <li class="visually-hidden" data-anchor-list id="docs-list">
-              <include
-                src="./partials/volunteer/volunteer-individual/documents.html"
-              ></include>
-            </li>
-
-            <li class="visually-hidden" data-anchor-list id="nuances">
-              <p>Нюанси обліку та оподаткування</p>
-            </li>
-          </ul>
+    <main id="volunteer-individual">
+      <section class="section volunteer__section section__zero">
+        <div class="container">
+          <div id="volonteer_organization" class="volunteer__wrapper">
+            <include
+              src="./partials/volunteer/volunteer-individual/aside.html"
+            ></include>
+            <ul class="volunteer__list">
+              <li data-anchor-list id="advantages">
+                <p>Переваги реєстрації</p>
+              </li>
+              <li class="visually-hidden" data-anchor-list id="register">
+                <include
+                  src="./partials/individual-register/individual-register.html"
+                ></include>
+              </li>
+              <li class="visually-hidden" data-anchor-list id="docs-list">
+                <include
+                  src="./partials/volunteer/volunteer-individual/documents.html"
+                ></include>
+              </li>
+              <li class="visually-hidden" data-anchor-list id="nuances">
+                <p>Нюанси обліку та оподаткування</p>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
     <include src="./partials/footer.html"></include>
   </body>
 </html>
