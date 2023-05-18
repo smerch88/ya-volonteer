@@ -7,6 +7,7 @@
 }
 
 .important-aspects__container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   & > p {
@@ -43,6 +44,9 @@
       margin-top: 0;
       max-width: 423px;
     }
+    @include desktop-first {
+      max-width: calc((100% - 24px) / 2);
+    }
   }
 
   & h3 {
@@ -73,6 +77,10 @@
     align-items: center;
     margin-bottom: 40px;
   }
+
+  @include desktop {
+    justify-content: space-between;
+  }
 }
 
 .wrapper {
@@ -81,6 +89,9 @@
   }
   @include desktop-first {
     max-width: 423px;
+  }
+  @include desktop {
+    max-width: calc((100% - 24px) / 2);
   }
 }
 
@@ -156,6 +167,9 @@
       'item2 item5'
       'item2 item6';
   }
+  @include desktop {
+    grid-template-columns: repeat(2, calc((100% - 24px) / 2));
+  }
 }
 
 .item1 {
@@ -209,7 +223,7 @@
     flex-wrap: wrap;
     max-height: 800px;
   }
-   @include desktop-first {
+  @include desktop-first {
     max-height: 700px;
   }
   & > li {
@@ -219,6 +233,9 @@
     @include desktop-first {
       max-width: 423px;
     }
+    @include desktop {
+      max-width: calc((100% - 24px) / 2);
+    }
   }
 }
 
@@ -227,5 +244,8 @@
     display: flex;
     gap: 24px;
     margin-top: 24px;
+  }
+  @include desktop {
+    justify-content: space-between;
   }
 }
