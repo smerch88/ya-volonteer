@@ -94,12 +94,20 @@
 }
 
 .faq__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  max-height: 0;
+
   border-color: $faq_border_color;
-  transition-property: padding-top, border, margin-top;
+  transition-property: padding-top, border, margin-top, max-height;
   transition-duration: 300ms;
   transition-timing-function: $cubic-bezier;
+  overflow: hidden;
 
   .faq__item.active & {
+    max-height: 100vh;
     margin-top: 16px;
     border-top: 1px solid $faq_border_color;
     padding-top: 16px;
@@ -130,10 +138,6 @@
   }
 
   @include desktop-first {
-    max-width: 800px;
-  }
-
-  @include desktop {
-    max-width: 768px;
+    max-width: 1000px;
   }
 }

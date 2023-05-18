@@ -70,7 +70,7 @@
     align-self: flex-start;
     margin-bottom: 0;
   }
-  
+
   & a {
     display: flex;
     align-items: center;
@@ -81,7 +81,7 @@
 }
 
 .footer__logo path {
-  transition: stroke 300ms $cubic-bezier;gi
+  transition: stroke 300ms $cubic-bezier;
 }
 
 .footer__logo:hover path {

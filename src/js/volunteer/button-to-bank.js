@@ -22,5 +22,6 @@ function handleButtonBank() {
     }
   });
 }
-
-buttonBank.addEventListener('click', handleButtonBank);
+if (Boolean(buttonBank)) {
+  buttonBank.addEventListener('click', handleButtonBank);
+}
