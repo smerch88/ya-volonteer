@@ -7,6 +7,7 @@ import './button-to-bank';
 import './sticky-sidebar';
 import '../bank/bank';
 import '../important-aspects/important-aspects';
+import '../resorces/resources';
 
 const { height: pageHeaderHeight } = document
   .querySelector('.header')
