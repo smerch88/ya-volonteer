@@ -1,0 +1,100 @@
+.hero-volunteer {
+  position: relative;
+  background-color: $secondary;
+  padding-top: 8px;
+  padding-bottom: 81px;
+  @include tablet {
+    padding-bottom: 88px;
+  }
+  @include desktop-first {
+    background-image: url(../images/hero-volunteer/bg-volunteer-desktop.svg);
+    background-position: bottom right -70px;
+    background-repeat: no-repeat;
+    background-color: $bg_green;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.hero-volunteer::before {
+  content: '';
+  display: none;
+  @include desktop-first {
+    position: absolute;
+    display: block;
+    background-image: url(../images/hero/cloud.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 130px;
+    height: 25px;
+    top: 62px;
+    left: 33%;
+  }
+  @include desktop {
+    top: 82px;
+    left: 35%;
+  }
+}
+
+.hero-volunteer::after {
+  content: '';
+  display: none;
+  @include desktop-first {
+    position: absolute;
+    display: block;
+    background-image: url(../images/hero/cloud-big.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 340px;
+    height: 62px;
+    bottom: 80px;
+    left: -145px;
+  }
+  @include desktop {
+    bottom: 66px;
+  }
+}
+
+.hero-volunteer__container {
+  display: flex;
+  height: 368px;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-image: url(../images/hero-volunteer/bg-volunteer-mobile.svg);
+  @include tablet {
+    height: 642px;
+    background-image: url(../images/hero-volunteer/bg-volunteer-tablet.svg);
+    background-position: center bottom;
+  }
+  @include desktop-first {
+    background-image: none;
+    justify-content: center;
+    height: 550px;
+  }
+}
+
+.hero-volunteer__title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.5;
+  @include tablet {
+    font-size: 40px;
+    margin-bottom: 32px;
+  }
+  @include desktop-first {
+    max-width: 588px;
+    font-weight: 500;
+  }
+  @include desktop {
+    font-size: 48px;
+    max-width: 747px;
+  }
+  & div {
+    @include desktop {
+      display: inline;
+    }
+  }
+}
