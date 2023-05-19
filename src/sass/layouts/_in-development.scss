@@ -1,0 +1,29 @@
+.in-dev-text {
+  color: #272727;
+  width: 407px;
+  height: 60px;
+  margin-top: 259px;
+  font-size: 40px;
+}
+
+.img-dev {
+  margin-top: 127px;
+  margin-right: 230px;
+  margin-left: 64px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.development_container {
+  display: flex;
+
+  flex-direction: row;
+  margin-left: 352px;
+}
+.in-development {
+  margin-bottom: 0px;
+  background-image: url("../images/in-development/clouds.svg");
+  background-repeat: repeat;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
