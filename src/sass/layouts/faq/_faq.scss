@@ -1,6 +1,10 @@
 .page-faq__section {
   padding: 40px 0;
 
+   & .container {
+     position: relative;
+  }
+
   @include tablet {
     padding: 88px 0;
   }
