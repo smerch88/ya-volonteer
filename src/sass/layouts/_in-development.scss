@@ -3,6 +3,10 @@
   background-repeat: repeat;
   background-size: contain;
   height: 682px;
+  @include desktop {
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
 }
 
 .hero-in-development_container {
@@ -12,7 +16,6 @@
   background-repeat: no-repeat;
   background-position: bottom right;
   padding-top: 20px;
-
   padding-left: 40px;
   @include tablet {
     display: flex;
@@ -24,6 +27,7 @@
   @include desktop {
     flex-direction: row;
     background-position: bottom right 150px;
+    background-repeat: no-repeat;
     padding-top: 256px;
     padding-left: 200px;
   }
