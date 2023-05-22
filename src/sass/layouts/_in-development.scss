@@ -12,7 +12,7 @@
 .hero-in-development_container {
   display: flex;
   flex-direction: column;
-  background-image: url(../images/in-development/girl.png);
+  background-image: url(../images/in-development/girl.svg);
   background-repeat: no-repeat;
   background-position: bottom right;
   padding-top: 20px;
@@ -27,7 +27,6 @@
   @include desktop {
     flex-direction: row;
     background-position: bottom right 150px;
-    background-repeat: no-repeat;
     padding-top: 256px;
     padding-left: 200px;
   }
