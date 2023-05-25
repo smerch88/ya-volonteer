@@ -48,6 +48,7 @@ function handleClearClick() {
     el.classList.remove('visually-hidden');
   });
   searchInput.value = '';
+  clearButton.classList.remove('active');
   searchError.classList.add('visually-hidden');
 }
 
