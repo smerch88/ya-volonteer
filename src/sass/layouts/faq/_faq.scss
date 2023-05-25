@@ -76,8 +76,10 @@
   transform: translateY(-50%);
 
   color: $primary;
+  opacity: 0;
+  pointer-events: none;
 
-  transition: color 300ms $cubic-bezier;
+  transition: color 300ms $cubic-bezier, opacity 300ms $cubic-bezier;
 
   & svg {
     stroke: currentColor;
@@ -86,6 +88,11 @@
   &:hover,
   &:focus {
     color: $error;
+  }
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
   }
 }
 
@@ -111,7 +118,7 @@
   border-collapse: collapse;
   text-align: center;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 8px;
   line-height: 1.5;
 
   & th:nth-child(n + 2) {
@@ -120,7 +127,7 @@
 
   & th {
     font-weight: 600;
-    font-size: 14px;
+    font-size: 10px;
     color: $secondary;
     background-color: #1b7fc4;
   }
@@ -151,9 +158,22 @@
 }
 
 .page-faq__search-error {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transform: translateY(110%);
   display: block;
   width: 100%;
   max-width: 820px;
   text-align: center;
+  font-size: 12px;
   color: $error;
+
+  @include tablet {
+    font-size: 16px;
+  }
+
+  @include desktop-first {
+    font-size: 20px;
+  }
 }

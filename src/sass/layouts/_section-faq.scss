@@ -107,7 +107,7 @@
   overflow: hidden;
 
   .faq__item.active & {
-    max-height: 100vh;
+    max-height: fit-content;
     margin-top: 16px;
     border-top: 1px solid $faq_border_color;
     padding-top: 16px;

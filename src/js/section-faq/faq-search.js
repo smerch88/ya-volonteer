@@ -7,8 +7,10 @@ const searchForm = document.querySelector('.page-faq__form');
 function handleInput(e) {
   searchError.classList.add('visually-hidden');
   const query = e.target.value.trim().toLowerCase();
+  clearButton.classList.add('active');
 
   if (!query) {
+    clearButton.classList.remove('active');
     questionList.map(el => {
       if (!el.classList.contains('visually-hidden')) return;
       el.classList.remove('visually-hidden');
