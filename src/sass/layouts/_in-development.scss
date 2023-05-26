@@ -3,23 +3,42 @@
     url(../images/in-development/clouds.svg);
   background-repeat: no-repeat, repeat;
   background-size: 90% 90%, cover;
-  background-position: bottom left 230px, center center;
+  background-position: bottom center, center center;
+  @include tablet {
+    background-position: bottom left 230px, center center;
+  }
+  @include desktop {
+    background-position: bottom left 230px, center center;
+  }
   position: relative;
   min-height: 300px;
   flex-grow: 1;
+  min-height: 692px;
+  @include tablet {
+    min-height: 915px;
+  }
+  @include desktop-first {
+    min-height: 706px;
+  }
 }
 
 .hero-in-development__text {
   position: absolute;
-  top: 40%;
-  left: 10%;
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
   color: $primary;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 500;
+  min-width: 260px;
   @include tablet {
-    font-size: 36px;
-  }
-  @include desktop {
+    transform: translateX(0);
+    top: 40%;
+    left: 10%;
     font-size: 40px;
+    max-width: 261px;
+  }
+  @include desktop-first {
+    max-width: 407px;
   }
 }
